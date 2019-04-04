@@ -1,0 +1,7 @@
+C:\Users\Renzo\source\repos\WebMoviSchool\WebMoviSchool\bin\WebMoviSchool.dll.config
+C:\Users\Renzo\source\repos\WebMoviSchool\WebMoviSchool\bin\WebMoviSchool.dll
+C:\Users\Renzo\source\repos\WebMoviSchool\WebMoviSchool\bin\WebMoviSchool.pdb
+C:\Users\Renzo\source\repos\WebMoviSchool\WebMoviSchool\obj\Debug\WebMoviSchool.csprojAssemblyReference.cache
+C:\Users\Renzo\source\repos\WebMoviSchool\WebMoviSchool\obj\Debug\WebMoviSchool.csproj.CoreCompileInputs.cache
+C:\Users\Renzo\source\repos\WebMoviSchool\WebMoviSchool\obj\Debug\WebMoviSchool.dll
+C:\Users\Renzo\source\repos\WebMoviSchool\WebMoviSchool\obj\Debug\WebMoviSchool.pdb
