@@ -97,6 +97,7 @@
     <Content Include="assets\sass\libs\_vendor.scss" />
     <Content Include="assets\sass\main.scss" />
     <Content Include="master.Master" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

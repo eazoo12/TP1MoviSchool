@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo se usa en el proceso de publicación y empaquetado del proyecto web. Para personalizar el comportamiento de este proceso,
+edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 para obtener más información. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Compilados Web</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="assets/css/font-awesome.min.css">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/css/main.css">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/fonts/fontawesome-webfont.eot">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/fonts/fontawesome-webfont.svg">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/fonts/fontawesome-webfont.ttf">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/fonts/fontawesome-webfont.woff">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/fonts/fontawesome-webfont.woff2">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/fonts/FontAwesome.otf">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/js/breakpoints.min.js">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/js/browser.min.js">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/js/jquery.min.js">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/js/main.js">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/js/util.js">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/base/_page.scss">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/base/_reset.scss">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/base/_typography.scss">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/components/_actions.scss">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/components/_box.scss">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/components/_button.scss">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/components/_contact.scss">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/components/_features.scss">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/components/_form.scss">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/components/_icon.scss">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/components/_icons.scss">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/components/_image.scss">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/components/_list.scss">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/components/_mini-posts.scss">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/components/_pagination.scss">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/components/_posts.scss">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/components/_row.scss">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/components/_section.scss">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/components/_table.scss">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/layout/_banner.scss">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/layout/_footer.scss">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/layout/_header.scss">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/layout/_main.scss">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/layout/_menu.scss">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/layout/_sidebar.scss">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/layout/_wrapper.scss">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="assets/sass/libs/_breakpoints.scss">
+      <publishTime>04/05/2019 01:22:56</publishTime>
+    </File>
+    <File Include="assets/sass/libs/_functions.scss">
+      <publishTime>04/05/2019 01:22:56</publishTime>
+    </File>
+    <File Include="assets/sass/libs/_html-grid.scss">
+      <publishTime>04/05/2019 01:22:56</publishTime>
+    </File>
+    <File Include="assets/sass/libs/_mixins.scss">
+      <publishTime>04/05/2019 01:22:56</publishTime>
+    </File>
+    <File Include="assets/sass/libs/_vars.scss">
+      <publishTime>04/05/2019 01:22:56</publishTime>
+    </File>
+    <File Include="assets/sass/libs/_vendor.scss">
+      <publishTime>04/05/2019 01:22:56</publishTime>
+    </File>
+    <File Include="assets/sass/main.scss">
+      <publishTime>04/05/2019 01:22:56</publishTime>
+    </File>
+    <File Include="bin/WebMoviSchool.dll">
+      <publishTime>04/05/2019 08:12:06</publishTime>
+    </File>
+    <File Include="bin/WebMoviSchool.pdb">
+      <publishTime>04/05/2019 08:12:06</publishTime>
+    </File>
+    <File Include="elements.html">
+      <publishTime>04/05/2019 01:22:56</publishTime>
+    </File>
+    <File Include="generic.html">
+      <publishTime>04/05/2019 01:22:56</publishTime>
+    </File>
+    <File Include="images/pic01.jpg">
+      <publishTime>04/05/2019 01:22:56</publishTime>
+    </File>
+    <File Include="images/pic02.jpg">
+      <publishTime>04/05/2019 01:22:56</publishTime>
+    </File>
+    <File Include="images/pic03.jpg">
+      <publishTime>04/05/2019 01:22:56</publishTime>
+    </File>
+    <File Include="images/pic04.jpg">
+      <publishTime>04/05/2019 01:22:56</publishTime>
+    </File>
+    <File Include="images/pic05.jpg">
+      <publishTime>04/05/2019 01:22:56</publishTime>
+    </File>
+    <File Include="images/pic06.jpg">
+      <publishTime>04/05/2019 01:22:56</publishTime>
+    </File>
+    <File Include="images/pic07.jpg">
+      <publishTime>04/05/2019 01:22:56</publishTime>
+    </File>
+    <File Include="images/pic08.jpg">
+      <publishTime>04/05/2019 01:22:56</publishTime>
+    </File>
+    <File Include="images/pic09.jpg">
+      <publishTime>04/05/2019 01:22:56</publishTime>
+    </File>
+    <File Include="images/pic10.jpg">
+      <publishTime>04/05/2019 01:22:56</publishTime>
+    </File>
+    <File Include="images/pic11.jpg">
+      <publishTime>04/05/2019 01:22:56</publishTime>
+    </File>
+    <File Include="index.aspx">
+      <publishTime>04/05/2019 01:22:56</publishTime>
+    </File>
+    <File Include="index2.html">
+      <publishTime>04/05/2019 01:22:56</publishTime>
+    </File>
+    <File Include="LICENSE.txt">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="master.Master">
+      <publishTime>04/05/2019 09:40:20</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>04/05/2019 09:41:31</publishTime>
+    </File>
+    <File Include="README.txt">
+      <publishTime>04/05/2019 01:22:55</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/05/2019 08:12:06</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
