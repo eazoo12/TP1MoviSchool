@@ -59,7 +59,7 @@
                             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                              </asp:ContentPlaceHolder>
 
-							<!-- Section -->
+							<%--<!-- Section -->
 								<section>
 									<header class="major">
 										<h2>Erat lacinia</h2>
@@ -94,9 +94,9 @@
 											</div>
 										</article>
 									</div>
-								</section>
+								</section>--%>
 
-							<!-- Section -->
+							<%--<!-- Section -->
 								<section>
 									<header class="major">
 										<h2>Ipsum sed dolor</h2>
@@ -151,7 +151,7 @@
 											</ul>
 										</article>
 									</div>
-								</section>
+								</section>--%>
 
 						</div>
 					</div>
