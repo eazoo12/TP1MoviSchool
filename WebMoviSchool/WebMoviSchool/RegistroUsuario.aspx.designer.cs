@@ -10,7 +10,7 @@
 namespace WebMoviSchool {
     
     
-    public partial class RegistroPadreaspx {
+    public partial class RegistroUsuario {
         
         /// <summary>
         /// Control TextBox1.
@@ -74,6 +74,33 @@ namespace WebMoviSchool {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        
+        /// <summary>
+        /// Control datepicker.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar datepicker;
+        
+        /// <summary>
+        /// Control txtdtp.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtdtp;
+        
+        /// <summary>
+        /// Control lnkpickdate.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnkpickdate;
         
         /// <summary>
         /// Control TextBox7.

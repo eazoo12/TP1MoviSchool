@@ -1,23 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="RegistroPadreaspx.aspx.cs" Inherits="WebMoviSchool.RegistroPadreaspx" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="RegistroUsuario.aspx.cs" Inherits="WebMoviSchool.RegistroUsuario" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
-        .auto-style3 {
-            width: 325px;
-        }
-        .auto-style4 {
-            width: 100%;
-            height: 299px;
-        }
-    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div _designerregion="0">
-        <table style="width:100%;">
+
+    <table style="width:100%;">
             <tr>
                 
                 <td >
                     <div class="align-center">
                         <strong>Registro de Padre de Familia</strong></div>
+                
                     <table class="auto-style4">
                     <tr>
                         <td class="col-6 col-12-small">Nombre :<asp:TextBox ID="TextBox1" runat="server" Height="31px" Width="256px"></asp:TextBox>
@@ -39,7 +31,10 @@
                     <tr>
                         <td class="auto-style3">Correo Electronico :<asp:TextBox ID="TextBox5" runat="server" Height="31px" Width="315px"></asp:TextBox>
                         </td>
-                        <td class="auto-style3">Fecha de Nacimiento :</td>
+                        <td>Fecha Nacimiento :<asp:Calendar ID="datepicker" runat="server" Visible="false" OnSelectionChanged="datepicker_SelectionChanged"></asp:Calendar><asp:TextBox ID="txtdtp" runat="server"></asp:TextBox><asp:LinkButton ID="lnkpickdate" runat="server" OnClick="lnkpickdate_Click">Fecha Nacimiento</asp:LinkButton>
+                            
+                        </td>
+
                         <td>:<asp:TextBox ID="TextBox7" runat="server" Height="31px" Width="315px"></asp:TextBox>
                         </td>
                     </tr>
@@ -53,16 +48,13 @@
                     </tr>
                     <tr>
                         <td class="auto-style3">
-                            <asp:Button ID="Button1" runat="server" Text="Guardar" Height="44px" Width="151px" />
+                            <asp:Button ID="Button1" runat="server" Text="Guardar" Height="44px" Width="151px" OnClick="Button1_Click" />
                         </td>
                         
                         
                     </tr>
                     </table>
-                </td>
-                
-            </tr>
-            
-        </table>
-    </div>
+
+
+    </table>
 </asp:Content>
