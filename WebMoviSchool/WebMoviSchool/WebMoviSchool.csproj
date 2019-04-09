@@ -158,6 +158,16 @@
       <DependentUpon>RegistroUsuario.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Capa Entidad\Capa Entidad.csproj">
+      <Project>{cb4156d1-b299-4283-9080-f4dcfba179af}</Project>
+      <Name>Capa Entidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Capa Negocio\Capa Negocio.csproj">
+      <Project>{363b1a33-ebe6-4ca9-becd-a3f2af512a15}</Project>
+      <Name>Capa Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

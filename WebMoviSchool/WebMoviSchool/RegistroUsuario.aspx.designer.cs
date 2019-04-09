@@ -13,67 +13,67 @@ namespace WebMoviSchool {
     public partial class RegistroUsuario {
         
         /// <summary>
-        /// Control TextBox1.
+        /// Control txtNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtNombre;
         
         /// <summary>
-        /// Control TextBox2.
+        /// Control txtApellido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox txtApellido;
         
         /// <summary>
-        /// Control TextBox8.
+        /// Control txtNrocelular.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox8;
+        protected global::System.Web.UI.WebControls.TextBox txtNrocelular;
         
         /// <summary>
-        /// Control DropDownList2.
+        /// Control cboTipDoc.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.DropDownList cboTipDoc;
         
         /// <summary>
-        /// Control TextBox3.
+        /// Control txtNro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox txtNro;
         
         /// <summary>
-        /// Control TextBox4.
+        /// Control txtDireccion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox txtDireccion;
         
         /// <summary>
-        /// Control TextBox5.
+        /// Control txtCorreoElec.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox txtCorreoElec;
         
         /// <summary>
         /// Control datepicker.
@@ -103,13 +103,13 @@ namespace WebMoviSchool {
         protected global::System.Web.UI.WebControls.LinkButton lnkpickdate;
         
         /// <summary>
-        /// Control DropDownList3.
+        /// Control cboGenero.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList3;
+        protected global::System.Web.UI.WebControls.DropDownList cboGenero;
         
         /// <summary>
         /// Control TextBox7.
@@ -121,67 +121,67 @@ namespace WebMoviSchool {
         protected global::System.Web.UI.WebControls.TextBox TextBox7;
         
         /// <summary>
-        /// Control DropDownList4.
+        /// Control cboPais.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList4;
+        protected global::System.Web.UI.WebControls.DropDownList cboPais;
         
         /// <summary>
-        /// Control DropDownList5.
+        /// Control cboDepartamento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList5;
+        protected global::System.Web.UI.WebControls.DropDownList cboDepartamento;
         
         /// <summary>
-        /// Control DropDownList6.
+        /// Control cboDistrito.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList6;
+        protected global::System.Web.UI.WebControls.DropDownList cboDistrito;
         
         /// <summary>
-        /// Control TextBox9.
+        /// Control txtUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox9;
+        protected global::System.Web.UI.WebControls.TextBox txtUsuario;
         
         /// <summary>
-        /// Control TextBox10.
+        /// Control txtPass.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox10;
+        protected global::System.Web.UI.WebControls.TextBox txtPass;
         
         /// <summary>
-        /// Control TextBox11.
+        /// Control txtRepass.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox11;
+        protected global::System.Web.UI.WebControls.TextBox txtRepass;
         
         /// <summary>
-        /// Control DropDownList7.
+        /// Control cboTipoUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList7;
+        protected global::System.Web.UI.WebControls.DropDownList cboTipoUsuario;
         
         /// <summary>
         /// Control Button1.
