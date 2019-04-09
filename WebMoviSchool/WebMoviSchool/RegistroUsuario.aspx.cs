@@ -26,7 +26,7 @@ namespace WebMoviSchool
 
         protected void datepicker_SelectionChanged(object sender, EventArgs e)
         {
-            txtdtp.Text = datepicker.SelectedDate.ToLongDateString();
+            txtdtp.Text = datepicker.SelectedDate.ToShortDateString();
             datepicker.Visible = false;
         }
     }
