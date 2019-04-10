@@ -8,7 +8,7 @@ namespace Capa_Datos
     class datConexion
     {
         
-        public static string cad_con = @"Server=.;Database=MoviSchool; Integrated Security=True;";
+        public static string cad_con = @"Server=DESKTOP-SIE6522;Database=MoviSchool; Integrated Security=True;";
 
 
     }

@@ -1,11 +1,11 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.master.cs" Inherits="WebMoviSchool.master" %>
 
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <!--
 	
 -->
-<html>
-	<head>
+<html lang="en">
+	<head runat="server">
 		<title>MoviSchool</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -37,7 +37,7 @@
 								</header>
 
 							<!-- Banner -->
-								<section id="banner">
+								<%--<section id="banner">
 									<div class="content">
 										<header>
 											<h1>Bievenido .......</h1>
@@ -51,7 +51,7 @@
 									<span class="image object">
 										<img src="images/pic10.jpg" alt="" />
 									</span>
-								</section>
+								</section>--%>
 
                             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                              </asp:ContentPlaceHolder>
@@ -171,8 +171,8 @@
 									</header>
 									<ul>
 										<li><a href="index.aspx">Homepage</a></li>
-										<li><a href="#generic.html">Consultas</a></li>
-										<li><a href="RegistroPadre.aspx">Registro Padres</a></li>
+										<li><a href="Prueba1.aspx">Consultas</a></li>
+										<li><a href="RegistroUsuario.aspx">Registro Usuario</a></li>
 										<li>
 											<span class="opener">Submenu</span>
 											<ul>

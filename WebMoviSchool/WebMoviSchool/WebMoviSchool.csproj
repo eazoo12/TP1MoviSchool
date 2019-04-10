@@ -97,6 +97,7 @@
     <Content Include="assets\sass\libs\_vendor.scss" />
     <Content Include="assets\sass\main.scss" />
     <Content Include="master.Master" />
+    <Content Include="Prueba1.aspx" />
     <Content Include="RegistroUsuario.aspx" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
@@ -150,6 +151,13 @@
       <DependentUpon>master.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Prueba1.aspx.cs">
+      <DependentUpon>Prueba1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prueba1.aspx.designer.cs">
+      <DependentUpon>Prueba1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RegistroUsuario.aspx.cs">
       <DependentUpon>RegistroUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
