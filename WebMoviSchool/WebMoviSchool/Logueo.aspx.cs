@@ -11,7 +11,7 @@ namespace WebMoviSchool
 {
     public partial class Logueo : System.Web.UI.Page
     {
-        int tipPersona;
+        String tipPersona;
         negUsuario oNegUsuario = new negUsuario();
         EntUsuario usuar = new EntUsuario();
         protected void Page_Load(object sender, EventArgs e)
@@ -22,6 +22,10 @@ namespace WebMoviSchool
             }  else if (((string)Session["ID_TIPOUSU"]) == "5")
             {
                 Response.Redirect("IndexMovilidad.aspx");
+            }
+            else
+            {
+
             }
             
         }
@@ -40,19 +44,19 @@ namespace WebMoviSchool
 
                 if (login.Count == 0)
                 {
-                    tipPersona = 0;
+                    tipPersona = "0";
                 }
                 else
                 {
-                    tipPersona = login[0].TipoUsuario;
+                    tipPersona = Convert.ToString(login[0].TipoUsuario);
                 }
                 Session["ID_TIPOUSU"] = tipPersona;
-                if (tipPersona== 4)
+                if (tipPersona== "4")
                 {
                    
                     Response.Redirect("IndexPadre.aspx", false);
                 }
-                else if(tipPersona == 5)
+                else if(tipPersona == "5")
                 {
                     Response.Redirect("IndexMovilidad.aspx", false);
                 }
