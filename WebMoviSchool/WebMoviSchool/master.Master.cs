@@ -13,5 +13,20 @@ namespace WebMoviSchool
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            if (Session["ID_TIPOUSU"] == null)
+            {
+                Response.Redirect("Logueo.aspx");
+                
+            }
+            
+        }
+
+        protected void btnCerrar2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("logout.aspx");
+        }
     }
 }

@@ -166,6 +166,81 @@ namespace Capa_Datos
             }
         }
 
+        public void LOGUEO_USUARIO(EntUsuario oEntUsuario)
+        {
+            try
+            {
+                using (SqlConnection conex = new SqlConnection(datConexion.cad_con))
+                {
+                    using (SqlCommand cmd = new SqlCommand("LOGUEO_USUARIO", conex))
+                    {
+                        conex.Open();
+                        cmd.Parameters.Add("@usuario", SqlDbType.VarChar, 200).Value = oEntUsuario.Usuario;
+                        cmd.Parameters.Add("@pass", SqlDbType.VarChar, 200).Value = oEntUsuario.Password;
+
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.ExecuteNonQuery();
+
+                        conex.Close();
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+        }
+
+
+
+        public List<EntUsuario> login(string usuario, string pass)
+        {
+
+            List<EntUsuario> oListR = new List<EntUsuario>();
+
+            using (SqlConnection conex = new SqlConnection(datConexion.cad_con))
+            {
+                using (SqlCommand cmd = new SqlCommand("LOGINN", conex))
+                {
+                    conex.Open();
+                    cmd.Parameters.Add("@usuario", SqlDbType.VarChar, 100).Value = usuario;
+                    cmd.Parameters.Add("@pass", SqlDbType.VarChar, 10).Value = pass;
+
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+
+                        int colidtipoUsuario = dr.GetOrdinal("idtipoUsuario");
+                        //int colCodArea = dr.GetOrdinal("codArea");
+
+
+                        int colCant = dr.FieldCount;
+                        object[] values = new object[colCant];
+                        EntUsuario oEntUsu = null;
+
+                        while (dr.Read())
+                        {
+                            oEntUsu = new EntUsuario();
+                            dr.GetValues(values);
+
+                            oEntUsu.TipoUsuario = Convert.ToInt16(values[colidtipoUsuario]);
+                            /// oEntUsu.CodArea = Convert.ToInt32(values[colCodArea]);
+
+
+                            oListR.Add(oEntUsu);
+                        }
+                    }
+                }
+            }
+            return oListR;
+
+        }
+
 
 
     }

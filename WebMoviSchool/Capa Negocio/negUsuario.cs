@@ -43,5 +43,15 @@ namespace Capa_Negocio
             return objDatUsaurio.SEL_TIPOUSUARIO();
         }
 
-    }
+        public void LOGUEO_USUARIO(EntUsuario oEntUsuario)
+        {
+            objDatUsaurio.LOGUEO_USUARIO(oEntUsuario);
+        }
+
+        public List<EntUsuario> login(string usuario, string pass)
+        {
+            return objDatUsaurio.login(usuario, pass);
+        }
+
+        }
 }

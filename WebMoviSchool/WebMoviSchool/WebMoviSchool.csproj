@@ -96,9 +96,16 @@
     <Content Include="assets\sass\libs\_vars.scss" />
     <Content Include="assets\sass\libs\_vendor.scss" />
     <Content Include="assets\sass\main.scss" />
+    <Content Include="IndexMovilidad.aspx" />
+    <Content Include="IndexPadre.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="Logueo.aspx" />
     <Content Include="master.Master" />
     <Content Include="Prueba1.aspx" />
+    <Content Include="RecuperarContraseña.aspx" />
     <Content Include="RegistroUsuario.aspx" />
+    <Content Include="MaestroPadre.Master" />
+    <Content Include="MaestroMovilidad.Master" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -143,6 +150,48 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="IndexMovilidad.aspx.cs">
+      <DependentUpon>IndexMovilidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexMovilidad.aspx.designer.cs">
+      <DependentUpon>IndexMovilidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndexPadre.aspx.cs">
+      <DependentUpon>IndexPadre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexPadre.aspx.designer.cs">
+      <DependentUpon>IndexPadre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logueo.aspx.cs">
+      <DependentUpon>Logueo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logueo.aspx.designer.cs">
+      <DependentUpon>Logueo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaestroMovilidad.Master.cs">
+      <DependentUpon>MaestroMovilidad.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaestroMovilidad.Master.designer.cs">
+      <DependentUpon>MaestroMovilidad.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MaestroPadre.Master.cs">
+      <DependentUpon>MaestroPadre.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaestroPadre.Master.designer.cs">
+      <DependentUpon>MaestroPadre.Master</DependentUpon>
+    </Compile>
     <Compile Include="master.Master.cs">
       <DependentUpon>master.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -157,6 +206,13 @@
     </Compile>
     <Compile Include="Prueba1.aspx.designer.cs">
       <DependentUpon>Prueba1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecuperarContraseña.aspx.cs">
+      <DependentUpon>RecuperarContraseña.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecuperarContraseña.aspx.designer.cs">
+      <DependentUpon>RecuperarContraseña.aspx</DependentUpon>
     </Compile>
     <Compile Include="RegistroUsuario.aspx.cs">
       <DependentUpon>RegistroUsuario.aspx</DependentUpon>

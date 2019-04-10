@@ -37,7 +37,7 @@
 								</header>
 
 							<!-- Banner -->
-								<%--<section id="banner">
+                            <%--<section id="banner">
 									<div class="content">
 										<header>
 											<h1>Bievenido .......</h1>
@@ -92,7 +92,6 @@
 										</article>
 									</div>
 								</section>--%>
-
 							<%--<!-- Section -->
 								<section>
 									<header class="major">
@@ -159,9 +158,8 @@
 
 							<!-- Search -->
 								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
-									</form>
+									<asp:Button ID="Button1"  runat="server" Text="Ingresar" OnClick="Button1_Click" />
+									
 								</section>
 
 							<!-- Menu -->
