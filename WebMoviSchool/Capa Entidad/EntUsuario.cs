@@ -43,17 +43,11 @@ namespace Capa_Entidad
 
         public string Genero { get { return _genero; } set { _genero = value; } }
 
-        int _pais;
+        int _iddistrito;
 
-        public int Pais { get { return _pais; } set { _pais = value; } }
+        public int Iddistrito { get { return _iddistrito; } set { _iddistrito = value; } }
 
-        int _departamento;
-
-        public int Departamento { get { return _departamento; } set { _departamento = value; } }
-
-        int _distrito;
-
-        public int Distrito { get { return _distrito; } set { _distrito = value; } }
+       
 
         string _usuario;
 

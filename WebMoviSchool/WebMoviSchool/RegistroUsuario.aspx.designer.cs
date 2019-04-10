@@ -112,15 +112,6 @@ namespace WebMoviSchool {
         protected global::System.Web.UI.WebControls.DropDownList cboGenero;
         
         /// <summary>
-        /// Control TextBox7.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox7;
-        
-        /// <summary>
         /// Control cboPais.
         /// </summary>
         /// <remarks>
