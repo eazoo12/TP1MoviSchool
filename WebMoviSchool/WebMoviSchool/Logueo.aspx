@@ -1,5 +1,19 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="Logueo.aspx.cs" Inherits="WebMoviSchool.Logueo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style1 {
+            width: 97%;
+        }
+        .auto-style2 {
+            width: 246px;
+        }
+        .auto-style4 {
+            width: 234px;
+        }
+        .auto-style5 {
+            width: 1147px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table>
@@ -36,16 +50,31 @@
             </td>
         </tr>
         </table> 
-        <p>
-         
-                <asp:Button ID="btnIngresar" runat="server" Height="43px" Text="Ingresar" Width="142px" OnClick="btnIngresar_Click" />
-         
-        </p>
 
       
    
     <p>
+        <table class="auto-style1" >
+            <tr>
+                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style4">
+         
+                <asp:Button ID="btnIngresar" runat="server" Height="43px" Text="Ingresar" Width="234px" OnClick="btnIngresar_Click" />
+         
+                </td>
+                <td class="auto-style5">
+         
         <asp:Button ID="btnOlvido" runat="server" Text="Olvidé mi contraseña" Width="248px" OnClick="btnOlvido_Click" />
+         
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style4">&nbsp;</td>
+                <td class="auto-style5">&nbsp;</td>
+            </tr>
+           
+        </table>
     </p>
     
     
