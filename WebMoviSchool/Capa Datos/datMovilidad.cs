@@ -62,5 +62,28 @@ namespace Capa_Datos
         }
 
 
+        public DataTable SEL_COLEGIO(int iddistrito)
+        {
+            using (SqlConnection conex = new SqlConnection(datConexion.cad_con))
+            {
+                using (var da = new SqlDataAdapter())
+                {
+                    using (SqlCommand cmd = new SqlCommand("SEL_COLEGIO", conex))
+                    {
+                        conex.Open();
+                        cmd.Parameters.Add("@iddistrito", SqlDbType.Int).Value = iddistrito;
+
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        da.SelectCommand = cmd;
+                        var dt = new DataTable();
+                        da.Fill(dt);
+                        conex.Close();
+                        return dt;
+                    }
+                }
+            }
+        }
+
+
     }
 }

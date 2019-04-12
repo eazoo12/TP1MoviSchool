@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Capa_Entidad;
 using Capa_Datos;
+using System.Data;
 
 namespace Capa_Negocio
 {
@@ -17,5 +18,11 @@ namespace Capa_Negocio
 
         }
 
-    }
+
+        public DataTable SEL_COLEGIO(int iddistrito)
+        {
+            return datOMovilidad.SEL_COLEGIO(iddistrito);
+        }
+
+        }
 }
