@@ -7,6 +7,7 @@ namespace Capa_Entidad
 {
     public class EntUsuario
     {
+        
         string _nombre;
 
         public string Nombre { get { return _nombre; } set { _nombre = value; } }

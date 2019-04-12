@@ -216,6 +216,7 @@ namespace Capa_Datos
                     {
 
                         int colidtipoUsuario = dr.GetOrdinal("idtipoUsuario");
+                        int colnroDocumento = dr.GetOrdinal("nroDocumento");
                         //int colCodArea = dr.GetOrdinal("codArea");
 
 
@@ -229,6 +230,7 @@ namespace Capa_Datos
                             dr.GetValues(values);
 
                             oEntUsu.TipoUsuario = Convert.ToInt16(values[colidtipoUsuario]);
+                            oEntUsu.NroDocumento = Convert.ToString(values[colnroDocumento]);
                             /// oEntUsu.CodArea = Convert.ToInt32(values[colCodArea]);
 
 

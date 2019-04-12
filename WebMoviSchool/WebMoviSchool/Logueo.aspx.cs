@@ -12,6 +12,7 @@ namespace WebMoviSchool
     public partial class Logueo : System.Web.UI.Page
     {
         String tipPersona;
+        String dniP;
         negUsuario oNegUsuario = new negUsuario();
         EntUsuario usuar = new EntUsuario();
         protected void Page_Load(object sender, EventArgs e)
@@ -45,12 +46,15 @@ namespace WebMoviSchool
                 if (login.Count == 0)
                 {
                     tipPersona = "0";
+                    dniP = "0";
                 }
                 else
                 {
                     tipPersona = Convert.ToString(login[0].TipoUsuario);
+                    dniP = Convert.ToString(login[0].NroDocumento);
                 }
                 Session["ID_TIPOUSU"] = tipPersona;
+                Session["DNI"] = dniP;
                 if (tipPersona== "4")
                 {
                    
