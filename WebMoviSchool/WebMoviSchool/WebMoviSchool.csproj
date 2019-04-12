@@ -103,6 +103,7 @@
     <Content Include="master.Master" />
     <Content Include="Prueba1.aspx" />
     <Content Include="RecuperarContraseña.aspx" />
+    <Content Include="RegistroMovilidad.aspx" />
     <Content Include="RegistroUsuario.aspx" />
     <Content Include="MaestroPadre.Master" />
     <Content Include="MaestroMovilidad.Master" />
@@ -213,6 +214,13 @@
     </Compile>
     <Compile Include="RecuperarContraseña.aspx.designer.cs">
       <DependentUpon>RecuperarContraseña.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroMovilidad.aspx.cs">
+      <DependentUpon>RegistroMovilidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistroMovilidad.aspx.designer.cs">
+      <DependentUpon>RegistroMovilidad.aspx</DependentUpon>
     </Compile>
     <Compile Include="RegistroUsuario.aspx.cs">
       <DependentUpon>RegistroUsuario.aspx</DependentUpon>
