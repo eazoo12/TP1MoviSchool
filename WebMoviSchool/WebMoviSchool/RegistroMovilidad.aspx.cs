@@ -60,7 +60,7 @@ namespace WebMoviSchool
                 cargar_Cabecera();
             }else
             {
-                Response.Write("<script>window.alert('Debes ingresar tu usuario antes')");
+               // Response.Write("<script>window.alert('Debes ingresar tu usuario antes')");
             }
             
         }
