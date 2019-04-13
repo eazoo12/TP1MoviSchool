@@ -17,27 +17,27 @@ namespace Capa_Entidad
 
         string _nroDocumento;
 
-        public string NroDocumento { get { return _nroDocumento; } set { _nombreChofer = value; } }
+        public string NroDocumento { get { return _nroDocumento; } set { _nroDocumento = value; } }
 
         string _telefono;
 
         public string Telefono { get { return _telefono; } set { _telefono = value; } }
 
-        int _iddistrito;
+        int _idColegio;
 
-        public int Iddistrito { get { return _iddistrito; } set { _iddistrito = value; } }
+        public int idColegio { get { return _idColegio; } set { _idColegio = value; } }
 
-        Byte _soat;
+        Byte[] _soat;
 
-        public Byte Soat { get { return _soat; } set { _soat = value; } }
+        public Byte[] Soat { get { return _soat; } set { _soat = value; } }
 
         string _placa;
 
         public string Placa { get { return _placa; } set { _placa = value; } }
 
-        Byte _revTecnica;
+        Byte[] _revTecnica;
 
-        public Byte RevTecnica { get { return _revTecnica; } set { _revTecnica = value; } }
+        public Byte[] RevTecnica { get { return _revTecnica; } set { _revTecnica = value; } }
 
         string _marca;
 
@@ -55,9 +55,9 @@ namespace Capa_Entidad
 
         public int Capacidad { get { return _capacidad; } set { _capacidad = value; } }
 
-        Byte _fotoCarro;
+        Byte[] _fotoCarro;
 
-        public Byte FotoCarro { get { return _fotoCarro; } set { _fotoCarro = value; } }
+        public Byte[] FotoCarro { get { return _fotoCarro; } set { _fotoCarro = value; } }
 
         int _papelRegla;
 
