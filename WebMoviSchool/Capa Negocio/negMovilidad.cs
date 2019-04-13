@@ -24,5 +24,11 @@ namespace Capa_Negocio
             return datOMovilidad.SEL_COLEGIO(iddistrito);
         }
 
+        public void INS_MOVILIDAD(EntMovilidadRegistro oEntUsuario, int opc)
+        {
+            datOMovilidad.INS_MOVILIDAD(oEntUsuario, opc);
+        }
+
+
         }
 }

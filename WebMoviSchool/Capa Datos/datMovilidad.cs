@@ -85,5 +85,56 @@ namespace Capa_Datos
         }
 
 
+        public void INS_MOVILIDAD(EntMovilidadRegistro oEntUsuario, int opc)
+        {
+            try
+            {
+                using (SqlConnection conex = new SqlConnection(datConexion.cad_con))
+                {
+
+                    using (SqlCommand cmd = new SqlCommand("INS_MOVILIDAD", conex))
+                    {
+                        conex.Open();
+                        cmd.Parameters.Add("@nombreChofer", SqlDbType.VarChar, 100).Value = oEntUsuario.NombreChofer;
+                        cmd.Parameters.Add("@idtipodocumento", SqlDbType.Int).Value = oEntUsuario.Idtipodocumento;
+                        cmd.Parameters.Add("@nroDocumento", SqlDbType.VarChar, 20).Value = oEntUsuario.NroDocumento;
+                        cmd.Parameters.Add("@telefono", SqlDbType.VarChar,15).Value = oEntUsuario.Telefono;
+                        cmd.Parameters.Add("@iddistrito", SqlDbType.Int).Value = oEntUsuario.Iddistrito;
+                        cmd.Parameters.Add("@Soat", SqlDbType.VarBinary).Value = oEntUsuario.Soat;
+                        cmd.Parameters.Add("@placa", SqlDbType.VarChar, 10).Value = oEntUsuario.Placa;
+                        cmd.Parameters.Add("@revTecnica", SqlDbType.VarBinary).Value = oEntUsuario.RevTecnica;
+                        cmd.Parameters.Add("@marca", SqlDbType.VarChar, 100).Value = oEntUsuario.Marca;
+                        cmd.Parameters.Add("@modelo", SqlDbType.VarChar, 100).Value = oEntUsuario.Modelo;
+
+                        cmd.Parameters.Add("@color", SqlDbType.VarChar, 100).Value = oEntUsuario.Color;
+                        cmd.Parameters.Add("@capacidad", SqlDbType.Int).Value = oEntUsuario.Capacidad;
+                        cmd.Parameters.Add("@fotoCarro", SqlDbType.VarBinary).Value = oEntUsuario.FotoCarro;
+                        cmd.Parameters.Add("@papelRegla", SqlDbType.Int).Value = oEntUsuario.PapelRegla;
+                        cmd.Parameters.Add("@dni", SqlDbType.VarChar,20).Value = oEntUsuario.Dni;
+
+
+                        cmd.Parameters.Add("@opc", SqlDbType.Int).Value = opc;
+
+
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.ExecuteNonQuery();
+
+                        conex.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+
+
+        }
+
+
+
+
+
     }
 }

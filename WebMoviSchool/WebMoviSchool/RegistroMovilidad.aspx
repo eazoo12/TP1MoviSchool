@@ -50,29 +50,29 @@
                         <td class="auto-style2">
                             <table class="auto-style4">
                                 <tr>
-                        <td class="col-6 col-12-small">Soat (*):<asp:TextBox ID="txtNombre" runat="server" Height="31px" Width="256px"></asp:TextBox>
+                        <td class="col-6 col-12-small">Soat (*):<asp:FileUpload ID="FileUpload1" runat="server" />
                         </td>
-                        <td class="auto-style3">Placa :<asp:TextBox ID="txtApellido" runat="server" Height="31px" Width="230px"></asp:TextBox>
+                        <td class="auto-style3">Placa :<asp:TextBox ID="txtPlaca" runat="server" Height="31px" Width="230px"></asp:TextBox>
                         </td>
-                        <td class="auto-style5">Rev. Tecnica :<asp:TextBox ID="txtNrocelular" runat="server" Height="31px" Width="230px"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="auto-style3">Marca (*):<asp:TextBox ID="txtNombre0" runat="server" Height="31px" Width="256px"></asp:TextBox>
-                        </td>
-                        <td class="auto-style3">Modelo (*):<asp:TextBox ID="txtNro" runat="server" Height="31px" Width="230px"></asp:TextBox>
-                        </td>
-                        <td class="auto-style5">Color :<asp:TextBox ID="txtDireccion" runat="server" Height="31px" Width="315px"></asp:TextBox>
+                        <td class="auto-style5">Rev. Tecnica :<asp:FileUpload ID="FileUploadRevtec" runat="server" />
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style3">Capacidad (*) :<asp:TextBox ID="txtCorreoElec" runat="server" Height="31px" Width="315px"></asp:TextBox>
+                        <td class="auto-style3">Marca (*):<asp:TextBox ID="txtMarca" runat="server" Height="31px" Width="256px"></asp:TextBox>
                         </td>
-                        <td>Nombre chofer :<asp:TextBox ID="txtCorreoElec0" runat="server" Height="31px" Width="315px"></asp:TextBox>
+                        <td class="auto-style3">Modelo (*):<asp:TextBox ID="txtModelo" runat="server" Height="31px" Width="230px"></asp:TextBox>
+                        </td>
+                        <td class="auto-style5">Color :<asp:TextBox ID="txtColor" runat="server" Height="31px" Width="315px"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style3">Capacidad (*) :<asp:TextBox ID="txtCapacidad" runat="server" Height="31px" Width="315px"></asp:TextBox>
+                        </td>
+                        <td>Nombre chofer :<asp:TextBox ID="txtChofer" runat="server" Height="31px" Width="315px"></asp:TextBox>
                             
                         </td>
 
-                        <td class="auto-style5">Telefono :<asp:TextBox ID="txtCorreoElec1" runat="server" Height="31px" Width="315px"></asp:TextBox>
+                        <td class="auto-style5">Telefono :<asp:TextBox ID="txtTelefono" runat="server" Height="31px" Width="315px"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -84,19 +84,20 @@
                                     
                         </td>
                         <td class="auto-style3">Departamento (*) :
-                            <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true">
-                            </asp:ScriptManager>
-                            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-
-                                <ContentTemplate>
-                                    <asp:DropDownList ID="cboDepartamento" runat="server" AutoPostBack="True" OnSelectedIndexChanged="cboDepartamento_SelectedIndexChanged" Width="202px">
-                                    </asp:DropDownList>
-                                </ContentTemplate>
+                            <%-- </ContentTemplate>
 
                                 <Triggers>
                                     <asp:AsyncPostBackTrigger ControlID="cboDepartamento" EventName="SelectedIndexChanged"/>
                                 </Triggers>
-                            </asp:UpdatePanel>
+                            </asp:UpdatePanel>--%>
+                                    <asp:DropDownList ID="cboDepartamento" runat="server" AutoPostBack="True" OnSelectedIndexChanged="cboDepartamento_SelectedIndexChanged" Width="202px">
+                                    </asp:DropDownList>
+                               <%-- </ContentTemplate>
+
+                                <Triggers>
+                                    <asp:AsyncPostBackTrigger ControlID="cboDepartamento" EventName="SelectedIndexChanged"/>
+                                </Triggers>
+                            </asp:UpdatePanel>--%>
                         </td>
                         <td class="auto-style5">Distrito (*):<asp:DropDownList ID="cboDistrito" runat="server" Width="202px" AutoPostBack="True" OnSelectedIndexChanged="cboDistrito_SelectedIndexChanged">
                             </asp:DropDownList>
@@ -109,13 +110,13 @@
                         <td class="auto-style3">Tipo Documento (*) :<asp:DropDownList ID="cboTipDocumento" runat="server" Width="202px" >
                             </asp:DropDownList>
                         </td>
-                        <td class="auto-style5">Nro Documento (*):<asp:TextBox ID="txtRepass" runat="server" Height="31px" Width="315px" TextMode="Password"></asp:TextBox>
+                        <td class="auto-style5">Nro Documento (*):<asp:TextBox ID="txtNrDocumento" runat="server" Height="31px" Width="315px" TextMode="Password"></asp:TextBox>
                         </td>
                     </tr>
                     
                     <tr>
                         <td class="auto-style3">
-                            <asp:Button ID="Button1" runat="server" Text="Agregar" Height="44px" Width="151px"/>
+                            <asp:Button ID="Button1" runat="server" Text="Agregar" Height="44px" Width="151px" OnClick="Button1_Click"/>
                         </td>
                         
                         

@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 using Capa_Negocio;
 using Capa_Entidad;
 using System.Data;
+using System.IO;
+using System.Configuration;
 
 namespace WebMoviSchool
 {
@@ -132,6 +134,43 @@ namespace WebMoviSchool
                 cboColegio.Items.Insert(0, new ListItem("--Ingrese un Colegio--", "0"));
 
             }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            EntMovilidadRegistro oEntMovilidadReg = new EntMovilidadRegistro();
+            HttpPostedFile postedFile = FileUpload1.PostedFile;
+            string filaname = Path.GetFileName(postedFile.FileName);
+            string fileExtension = Path.GetExtension(filaname);
+            int fileSize = postedFile.ContentLength;
+            if(fileExtension.ToLower() == ".jpeg" || fileExtension.ToLower() == ".bmp" ||
+                fileExtension.ToLower() == ".gif" || fileExtension.ToLower() == ".png")
+            {
+                Stream stream = postedFile.InputStream;
+                BinaryReader binaryReader = new BinaryReader(stream);
+                byte[] bytes = binaryReader.ReadBytes((int)stream.Length);
+
+                //string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+                oEntMovilidadReg.NombreChofer = txtChofer.Text;
+                oEntMovilidadReg.Idtipodocumento = Convert.ToInt16(cboTipDocumento.SelectedValue);
+                oEntMovilidadReg.NroDocumento = txtNrDocumento.Text;
+                oEntMovilidadReg.Telefono = txtTelefono.Text;
+                oEntMovilidadReg.Iddistrito = Convert.ToInt16(cboDistrito.SelectedValue);
+                oEntMovilidadReg.Soat = Convert.ToByte(bytes);
+                oEntMovilidadReg.Placa = txtPlaca.Text;
+                oEntMovilidadReg.RevTecnica = Convert.ToByte(bytes);
+                oEntMovilidadReg.Marca = txtMarca.Text;
+                oEntMovilidadReg.Modelo = txtModelo.Text;
+                oEntMovilidadReg.Color = txtColor.Text;
+                oEntMovilidadReg.Capacidad = Convert.ToInt16(txtCapacidad.Text);
+                oEntMovilidadReg.FotoCarro = Convert.ToByte(bytes);
+                oEntMovilidadReg.PapelRegla = 1;
+                oEntMovilidadReg.Dni = txtNrDocumento.Text;
+
+                negOMovilidad.INS_MOVILIDAD(oEntMovilidadReg, 1);
+
+            }
+
         }
     }
 }
