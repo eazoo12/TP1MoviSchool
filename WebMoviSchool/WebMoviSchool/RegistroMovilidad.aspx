@@ -50,12 +50,12 @@
                         <td class="auto-style2">
                             <table class="auto-style4">
                                 <tr>
-                        <td class="col-6 col-12-small">Soat (*):<asp:FileUpload ID="FileUpload1" runat="server" />
+                        <%--<td class="col-6 col-12-small">Soat (*):<asp:FileUpload ID="FileUpload1" runat="server" />
                         </td>
                         <td class="auto-style3">Placa :<asp:TextBox ID="txtPlaca" runat="server" Height="31px" Width="230px"></asp:TextBox>
                         </td>
                         <td class="auto-style3">Rev. Tecnica :<asp:FileUpload ID="FileUploadRevtec" runat="server" />
-                        </td>
+                        </td>--%>
                     </tr>
                     <tr>
                         <td class="auto-style3">Marca (*):<asp:TextBox ID="txtMarca" runat="server" Height="31px" Width="256px"></asp:TextBox>
@@ -113,7 +113,14 @@
                         <td class="auto-style3">Nro Documento (*):<asp:TextBox ID="txtNrDocumento" runat="server" Height="31px" Width="315px" TextMode="Password"></asp:TextBox>
                         </td>
                     </tr>
-                    
+                    <tr>
+                    <td class="col-6 col-12-small">Soat (*):<asp:FileUpload ID="FileUpload1" runat="server" />
+                        </td>
+                        <td class="auto-style3">Placa :<asp:TextBox ID="txtPlaca" runat="server" Height="31px" Width="230px"></asp:TextBox>
+                        </td>
+                        <td class="auto-style3">Rev. Tecnica :<asp:FileUpload ID="FileUploadRevtec" runat="server" />
+                        </td>
+                  </tr>
                     <tr>
                         <td class="auto-style3">
                             <asp:Button ID="Button1" runat="server" Text="Agregar" Height="44px" Width="151px" OnClick="Button1_Click"/>
