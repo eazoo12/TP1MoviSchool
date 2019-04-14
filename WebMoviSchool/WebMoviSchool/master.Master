@@ -169,7 +169,7 @@
 									</header>
 									<ul>
 										<li><a href="index.aspx">Homepage</a></li>
-										<li><a href="Prueba1.aspx">Consultas</a></li>
+										<li><a href="ConsultaMovilidad.aspx">Consultar Movilidad</a></li>
 										<li><a href="RegistroUsuario.aspx">Registro Usuario</a></li>
 										<li>
 											<span class="opener">Submenu</span>

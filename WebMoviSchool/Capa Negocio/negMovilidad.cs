@@ -29,6 +29,11 @@ namespace Capa_Negocio
             datOMovilidad.INS_MOVILIDAD(oEntUsuario, opc);
         }
 
+        public List<EntBMovilidadUs> SEL_MOVILIDAD_USUARIO(string bus)
+        {
+            return datOMovilidad.SEL_MOVILIDAD_USUARIO(bus);
+        }
+
 
         }
 }

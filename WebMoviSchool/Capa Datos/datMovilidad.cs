@@ -134,6 +134,63 @@ namespace Capa_Datos
 
 
 
+        public List<EntBMovilidadUs> SEL_MOVILIDAD_USUARIO(string bus)
+        {
+
+            List<EntBMovilidadUs> oListR = new List<EntBMovilidadUs>();
+
+            using (SqlConnection conex = new SqlConnection(datConexion.cad_con))
+            {
+                using (SqlCommand cmd = new SqlCommand("SEL_MOVILIDAD_USUARIO", conex))
+                {
+                    conex.Open();
+                    cmd.Parameters.Add("@nombre", SqlDbType.VarChar,50).Value = bus;
+
+
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+
+                        int colcodUsurio = dr.GetOrdinal("codUsurio");
+                        int colnom_ape = dr.GetOrdinal("nom_ape");
+                        int colcelular = dr.GetOrdinal("celular");
+                        int colcorreoElec = dr.GetOrdinal("correoElec");
+                        int colcantida_choferes = dr.GetOrdinal("cantida_choferes");
+                        //int colCodArea = dr.GetOrdinal("codArea");
+
+
+                        int colCant = dr.FieldCount;
+                        object[] values = new object[colCant];
+                        EntBMovilidadUs oEntUsu = null;
+
+                        while (dr.Read())
+                        {
+                            oEntUsu = new EntBMovilidadUs();
+                            dr.GetValues(values);
+
+                            oEntUsu.CodUsurio = Convert.ToInt32(values[colcodUsurio]);
+                            oEntUsu.Nom_ape = Convert.ToString(values[colnom_ape]);
+                            oEntUsu.Celular = Convert.ToString(values[colcelular]);
+                            oEntUsu.CorreoElec = Convert.ToString(values[colcorreoElec]);
+                            oEntUsu.CorreoElec = Convert.ToString(values[colcorreoElec]);
+
+                            /// oEntUsu.CodArea = Convert.ToInt32(values[colCodArea]);
+
+
+                            oListR.Add(oEntUsu);
+                        }
+                    }
+                }
+            }
+            return oListR;
+
+        }
+
+
+
 
 
     }

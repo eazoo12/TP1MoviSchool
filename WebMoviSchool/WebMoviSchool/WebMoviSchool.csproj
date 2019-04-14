@@ -96,6 +96,7 @@
     <Content Include="assets\sass\libs\_vars.scss" />
     <Content Include="assets\sass\libs\_vendor.scss" />
     <Content Include="assets\sass\main.scss" />
+    <Content Include="ConsultaMovilidad.aspx" />
     <Content Include="IndexMovilidad.aspx" />
     <Content Include="IndexPadre.aspx" />
     <Content Include="logout.aspx" />
@@ -144,6 +145,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsultaMovilidad.aspx.cs">
+      <DependentUpon>ConsultaMovilidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultaMovilidad.aspx.designer.cs">
+      <DependentUpon>ConsultaMovilidad.aspx</DependentUpon>
+    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
