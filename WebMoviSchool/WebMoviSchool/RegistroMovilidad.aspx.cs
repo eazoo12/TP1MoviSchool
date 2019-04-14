@@ -58,13 +58,28 @@ namespace WebMoviSchool
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //dniCOd = "47266222";
+            ////dniCOd = "47266222";
+            //if (((string)Session["DNI"]) == "4")
+            //{
+            //    Response.Redirect("IndexPadre.aspx");
+            //}
+            //else if (((string)Session["ID_TIPOUSU"]) == "5")
+            //{
+            //    Response.Redirect("IndexMovilidad.aspx");
+            //}
+            //else
+            //{
+
+            //}
+                       
+
             if (Session["DNI"] != null)
             {
                 cargar_Cabecera();
             }else
             {
-               // Response.Write("<script>window.alert('Debes ingresar tu usuario antes')");
+                Response.Redirect("index.aspx");
+                // Response.Write("<script>window.alert('Debes ingresar tu usuario antes')");
             }
 
 
