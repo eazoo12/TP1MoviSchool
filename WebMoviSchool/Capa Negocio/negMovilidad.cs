@@ -34,6 +34,11 @@ namespace Capa_Negocio
             return datOMovilidad.SEL_MOVILIDAD_USUARIO(bus);
         }
 
+        public List<EntUsuario> SEL_NRO_CORREO(string nroDocument, string correo)
+        {
+            return datOMovilidad.SEL_NRO_CORREO(nroDocument, correo);
+        }
+
 
         }
 }

@@ -186,6 +186,8 @@ namespace WebMoviSchool
 
                 negOMovilidad.INS_MOVILIDAD(oEntMovilidadReg, 1);
 
+                Response.Redirect("RegistroMovilidad.aspx");
+
             }
 
         }

@@ -175,8 +175,58 @@ namespace Capa_Datos
                             oEntUsu.Nom_ape = Convert.ToString(values[colnom_ape]);
                             oEntUsu.Celular = Convert.ToString(values[colcelular]);
                             oEntUsu.CorreoElec = Convert.ToString(values[colcorreoElec]);
-                            oEntUsu.CorreoElec = Convert.ToString(values[colcorreoElec]);
+                            oEntUsu.Cantida_choferes = Convert.ToInt32(values[colcantida_choferes]);
 
+                            /// oEntUsu.CodArea = Convert.ToInt32(values[colCodArea]);
+
+
+                            oListR.Add(oEntUsu);
+                        }
+                    }
+                }
+            }
+            return oListR;
+
+        }
+
+
+
+        public List<EntUsuario> SEL_NRO_CORREO(string nroDocument, string correo)
+        {
+
+            List<EntUsuario> oListR = new List<EntUsuario>();
+
+            using (SqlConnection conex = new SqlConnection(datConexion.cad_con))
+            {
+                using (SqlCommand cmd = new SqlCommand("SEL_NRO_CORREO", conex))
+                {
+                    conex.Open();
+                    cmd.Parameters.Add("@nroDocumento", SqlDbType.VarChar, 20).Value = nroDocument;
+                    cmd.Parameters.Add("@correo", SqlDbType.VarChar, 200).Value = correo;
+
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+
+                        int colnroDocumento = dr.GetOrdinal("nroDocumento");
+                        int colcorreoElec = dr.GetOrdinal("correoElec");
+                        //int colCodArea = dr.GetOrdinal("codArea");
+
+
+                        int colCant = dr.FieldCount;
+                        object[] values = new object[colCant];
+                        EntUsuario oEntUsu = null;
+
+                        while (dr.Read())
+                        {
+                            oEntUsu = new EntUsuario();
+                            dr.GetValues(values);
+
+                            oEntUsu.NroDocumento = Convert.ToString(values[colnroDocumento]);
+                            oEntUsu.CorreoElec = Convert.ToString(values[colcorreoElec]);
                             /// oEntUsu.CodArea = Convert.ToInt32(values[colCodArea]);
 
 
