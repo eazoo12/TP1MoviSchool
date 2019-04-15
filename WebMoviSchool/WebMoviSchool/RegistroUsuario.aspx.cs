@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using Capa_Negocio;
 using Capa_Entidad;
 using System.Data;
+using System.Windows.Forms;
 
 namespace WebMoviSchool
 {
@@ -15,6 +16,7 @@ namespace WebMoviSchool
         negUsuario oNegUsuario = new negUsuario();
         negMovilidad oNegMovilidad = new negMovilidad();
         EntUsuario usuar = new EntUsuario();
+        int encontro;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -84,7 +86,12 @@ namespace WebMoviSchool
 
             
                 oNegUsuario.INS_USUARIO(oEntUsuario, 1);
+                MessageBox.Show("Registro exitoso");
                 Response.Redirect("RegistroUsuario.aspx");
+                }
+                else
+                {
+                    MessageBox.Show("Complete todos los campos");
                 }
             }
 
@@ -129,25 +136,44 @@ namespace WebMoviSchool
             
                 List<EntUsuario> login = new List<EntUsuario>();
 
-                
+                 
 
                 login = oNegMovilidad.SEL_NRO_CORREO(txtNro.Text, txtCorreoElec.Text);
-
-                if (login.Count == 0)
+                if(login.Count == 0)
                 {
-                         lblNroVa.Text = "OK";
+                    encontro = 0;
+                }
+                
+
+                if ((login.Count == 0 ||  txtNro.Text != login[0].NroDocumento))
+                {
+                            if ((login.Count == 0 && encontro == 0) || ((login.Count == 1 && encontro == 0)))
+                            {
+                                lblNroVa.Text = "OK";
+                            }
+                             
                             
-                 }
-                else
+                       
+                }
+                if ((login.Count == 0 || txtCorreoElec.Text != login[0].CorreoElec))
+                {
+                            if ((login.Count == 0 && encontro == 0) || ((login.Count == 1 && encontro == 0)))
+                            {
+                                lblCorreo.Text = "OK";
+                            }
+
+                
+                }
+                if (login.Count == 1)
                 {
 
-                    if (txtNro.Text != "")
+                    if (txtNro.Text != "" && txtNro.Text == login[0].NroDocumento)
                     {
                         usuar.NroDocumento = login[0].NroDocumento;
                         
                         lblNroVa.Text = "El Nro " + usuar.NroDocumento + " Ya existe";
                     }
-                    if (txtCorreoElec.Text != "")
+                    if (txtCorreoElec.Text != "" && txtCorreoElec.Text == login[0].CorreoElec)
                     {
                          usuar.CorreoElec = login[0].CorreoElec;
                          lblCorreo.Text= "El correo " + usuar.CorreoElec + " Ya existe";
@@ -173,6 +199,7 @@ namespace WebMoviSchool
         protected void txtCorreoElec_TextChanged(object sender, EventArgs e)
         {
             ValidacionNro_CoreUni();
+            txtUsuario.Text = txtCorreoElec.Text.Trim();
         }
 
         protected void cboTipDoc_SelectedIndexChanged(object sender, EventArgs e)

@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Capa_Negocio;
 using Capa_Entidad;
+using System.Windows.Forms;
 
 namespace WebMoviSchool
 {
@@ -47,11 +48,15 @@ namespace WebMoviSchool
                 {
                     tipPersona = "0";
                     dniP = "0";
+
+                    MessageBox.Show("Usuario y/o password son incorrectos");
                 }
                 else
                 {
                     tipPersona = Convert.ToString(login[0].TipoUsuario);
                     dniP = Convert.ToString(login[0].NroDocumento);
+
+                    
                 }
                 Session["ID_TIPOUSU"] = tipPersona;
                 Session["DNI"] = dniP;
@@ -65,6 +70,10 @@ namespace WebMoviSchool
                     Response.Redirect("IndexMovilidad.aspx", false);
                 }
                 
+            }
+            else
+            {
+                MessageBox.Show("Ingrese un usuario y password");
             }
 
         }

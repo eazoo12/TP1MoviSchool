@@ -9,6 +9,7 @@ using Capa_Entidad;
 using System.Data;
 using System.IO;
 using System.Configuration;
+using System.Windows.Forms;
 
 namespace WebMoviSchool
 {
@@ -201,8 +202,14 @@ namespace WebMoviSchool
 
                 negOMovilidad.INS_MOVILIDAD(oEntMovilidadReg, 1);
 
+                MessageBox.Show("Registro exitoso");
+
                 Response.Redirect("RegistroMovilidad.aspx");
 
+            }
+            else
+            {
+                MessageBox.Show("Complete todos los campos");
             }
 
         }
