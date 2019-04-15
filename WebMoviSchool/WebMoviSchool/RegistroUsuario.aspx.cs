@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using Capa_Negocio;
 using Capa_Entidad;
 using System.Data;
-using System.Windows.Forms;
+//using System.Windows.Forms;
 
 namespace WebMoviSchool
 {
@@ -86,12 +86,15 @@ namespace WebMoviSchool
 
             
                 oNegUsuario.INS_USUARIO(oEntUsuario, 1);
-                MessageBox.Show("Registro exitoso");
+                    //MessageBox.Show("Registro exitoso");
+                Response.Write("<script>alert('Registro exitoso !!!!')</script>");
+
                 Response.Redirect("RegistroUsuario.aspx");
                 }
                 else
                 {
-                    MessageBox.Show("Complete todos los campos");
+                    //MessageBox.Show("Complete todos los campos");
+                    Response.Write("<script>alert('Complete todos los campos !!!!')</script>");
                 }
             }
 

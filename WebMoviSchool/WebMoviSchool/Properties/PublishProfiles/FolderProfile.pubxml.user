@@ -148,28 +148,28 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>04/05/2019 01:22:56</publishTime>
     </File>
     <File Include="bin/Capa Datos.dll">
-      <publishTime>04/14/2019 13:30:23</publishTime>
+      <publishTime>04/15/2019 11:54:49</publishTime>
     </File>
     <File Include="bin/Capa Datos.pdb">
-      <publishTime>04/14/2019 13:30:23</publishTime>
+      <publishTime>04/15/2019 11:54:49</publishTime>
     </File>
     <File Include="bin/Capa Entidad.dll">
-      <publishTime>04/14/2019 01:14:10</publishTime>
+      <publishTime>04/15/2019 11:54:49</publishTime>
     </File>
     <File Include="bin/Capa Entidad.pdb">
-      <publishTime>04/14/2019 01:14:10</publishTime>
+      <publishTime>04/15/2019 11:54:49</publishTime>
     </File>
     <File Include="bin/Capa Negocio.dll">
-      <publishTime>04/14/2019 13:30:24</publishTime>
+      <publishTime>04/15/2019 11:54:49</publishTime>
     </File>
     <File Include="bin/Capa Negocio.pdb">
-      <publishTime>04/14/2019 13:30:24</publishTime>
+      <publishTime>04/15/2019 11:54:49</publishTime>
     </File>
     <File Include="bin/WebMoviSchool.dll">
-      <publishTime>04/15/2019 01:40:05</publishTime>
+      <publishTime>04/15/2019 11:54:49</publishTime>
     </File>
     <File Include="bin/WebMoviSchool.pdb">
-      <publishTime>04/15/2019 01:40:05</publishTime>
+      <publishTime>04/15/2019 11:54:49</publishTime>
     </File>
     <File Include="ConsultaMovilidad.aspx">
       <publishTime>04/14/2019 01:25:07</publishTime>
@@ -244,7 +244,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>04/14/2019 01:26:39</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>04/15/2019 01:41:58</publishTime>
+      <publishTime>04/15/2019 12:06:45</publishTime>
     </File>
     <File Include="Prueba1.aspx">
       <publishTime>04/09/2019 23:18:00</publishTime>
@@ -265,7 +265,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>04/15/2019 01:40:56</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/09/2019 23:24:29</publishTime>
+      <publishTime>04/15/2019 12:06:44</publishTime>
     </File>
   </ItemGroup>
 </Project>

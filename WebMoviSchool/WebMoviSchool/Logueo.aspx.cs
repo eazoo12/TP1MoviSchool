@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Capa_Negocio;
 using Capa_Entidad;
-using System.Windows.Forms;
+//using System.Windows.Forms;
 
 namespace WebMoviSchool
 {
@@ -49,7 +49,8 @@ namespace WebMoviSchool
                     tipPersona = "0";
                     dniP = "0";
 
-                    MessageBox.Show("Usuario y/o password son incorrectos");
+                    ///
+                    Response.Write("<script>alert('Usuarios y Clave incorrecto !!!!')</script>");
                 }
                 else
                 {
@@ -73,7 +74,8 @@ namespace WebMoviSchool
             }
             else
             {
-                MessageBox.Show("Ingrese un usuario y password");
+                ///MessageBox.Show("Ingrese un usuario y password");
+                Response.Write("<script>alert('Ingrese un usuario y password !!!!')</script>");
             }
 
         }

@@ -8,14 +8,14 @@ C:\Users\Renzo\source\repos\WebMoviSchool\WebMoviSchool\obj\Debug\WebMoviSchool.
 C:\Users\Renzo\Desktop\Git repositorio\TP1MoviSchool\WebMoviSchool\WebMoviSchool\bin\WebMoviSchool.dll.config
 C:\Users\Renzo\Desktop\Git repositorio\TP1MoviSchool\WebMoviSchool\WebMoviSchool\bin\WebMoviSchool.dll
 C:\Users\Renzo\Desktop\Git repositorio\TP1MoviSchool\WebMoviSchool\WebMoviSchool\bin\WebMoviSchool.pdb
-C:\Users\Renzo\Desktop\Git repositorio\TP1MoviSchool\WebMoviSchool\WebMoviSchool\obj\Debug\WebMoviSchool.csprojAssemblyReference.cache
-C:\Users\Renzo\Desktop\Git repositorio\TP1MoviSchool\WebMoviSchool\WebMoviSchool\obj\Debug\WebMoviSchool.csproj.CoreCompileInputs.cache
-C:\Users\Renzo\Desktop\Git repositorio\TP1MoviSchool\WebMoviSchool\WebMoviSchool\obj\Debug\WebMoviSchool.dll
-C:\Users\Renzo\Desktop\Git repositorio\TP1MoviSchool\WebMoviSchool\WebMoviSchool\obj\Debug\WebMoviSchool.pdb
 C:\Users\Renzo\Desktop\Git repositorio\TP1MoviSchool\WebMoviSchool\WebMoviSchool\bin\Capa Entidad.dll
 C:\Users\Renzo\Desktop\Git repositorio\TP1MoviSchool\WebMoviSchool\WebMoviSchool\bin\Capa Negocio.dll
 C:\Users\Renzo\Desktop\Git repositorio\TP1MoviSchool\WebMoviSchool\WebMoviSchool\bin\Capa Datos.dll
 C:\Users\Renzo\Desktop\Git repositorio\TP1MoviSchool\WebMoviSchool\WebMoviSchool\bin\Capa Entidad.pdb
 C:\Users\Renzo\Desktop\Git repositorio\TP1MoviSchool\WebMoviSchool\WebMoviSchool\bin\Capa Negocio.pdb
 C:\Users\Renzo\Desktop\Git repositorio\TP1MoviSchool\WebMoviSchool\WebMoviSchool\bin\Capa Datos.pdb
+C:\Users\Renzo\Desktop\Git repositorio\TP1MoviSchool\WebMoviSchool\WebMoviSchool\obj\Debug\WebMoviSchool.csprojAssemblyReference.cache
+C:\Users\Renzo\Desktop\Git repositorio\TP1MoviSchool\WebMoviSchool\WebMoviSchool\obj\Debug\WebMoviSchool.csproj.CoreCompileInputs.cache
 C:\Users\Renzo\Desktop\Git repositorio\TP1MoviSchool\WebMoviSchool\WebMoviSchool\obj\Debug\WebMoviSchool.csproj.CopyComplete
+C:\Users\Renzo\Desktop\Git repositorio\TP1MoviSchool\WebMoviSchool\WebMoviSchool\obj\Debug\WebMoviSchool.dll
+C:\Users\Renzo\Desktop\Git repositorio\TP1MoviSchool\WebMoviSchool\WebMoviSchool\obj\Debug\WebMoviSchool.pdb
