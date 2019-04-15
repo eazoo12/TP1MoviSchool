@@ -27,7 +27,7 @@
             <td>
                 <div class="align-center">
                  <p>
-                     <asp:TextBox ID="txtUsuario" runat="server" Height="28px" Width="205px"></asp:TextBox>
+                     <asp:TextBox ID="txtUsuario" runat="server" Height="28px" Width="371px"></asp:TextBox>
                 </p>
                 </div>
             </td>
@@ -44,7 +44,7 @@
             <td>
                 <div class="align-center">
                     <p>
-                    <asp:TextBox ID="txtContraseña" runat="server" Height="28px" Width="132px"></asp:TextBox>
+                    <asp:TextBox ID="txtContraseña" runat="server" Height="28px" Width="383px" TextMode="Password" ></asp:TextBox>
                         </p>
                 </div>
             </td>

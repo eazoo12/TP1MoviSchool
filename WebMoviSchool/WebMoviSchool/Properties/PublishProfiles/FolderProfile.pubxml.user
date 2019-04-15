@@ -148,28 +148,31 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>04/05/2019 01:22:56</publishTime>
     </File>
     <File Include="bin/Capa Datos.dll">
-      <publishTime>04/10/2019 01:12:19</publishTime>
+      <publishTime>04/14/2019 13:30:23</publishTime>
     </File>
     <File Include="bin/Capa Datos.pdb">
-      <publishTime>04/10/2019 01:12:19</publishTime>
+      <publishTime>04/14/2019 13:30:23</publishTime>
     </File>
     <File Include="bin/Capa Entidad.dll">
-      <publishTime>04/09/2019 22:09:24</publishTime>
+      <publishTime>04/14/2019 01:14:10</publishTime>
     </File>
     <File Include="bin/Capa Entidad.pdb">
-      <publishTime>04/09/2019 22:09:24</publishTime>
+      <publishTime>04/14/2019 01:14:10</publishTime>
     </File>
     <File Include="bin/Capa Negocio.dll">
-      <publishTime>04/10/2019 01:12:19</publishTime>
+      <publishTime>04/14/2019 13:30:24</publishTime>
     </File>
     <File Include="bin/Capa Negocio.pdb">
-      <publishTime>04/10/2019 01:12:19</publishTime>
+      <publishTime>04/14/2019 13:30:24</publishTime>
     </File>
     <File Include="bin/WebMoviSchool.dll">
-      <publishTime>04/10/2019 02:37:02</publishTime>
+      <publishTime>04/15/2019 01:40:05</publishTime>
     </File>
     <File Include="bin/WebMoviSchool.pdb">
-      <publishTime>04/10/2019 02:37:02</publishTime>
+      <publishTime>04/15/2019 01:40:05</publishTime>
+    </File>
+    <File Include="ConsultaMovilidad.aspx">
+      <publishTime>04/14/2019 01:25:07</publishTime>
     </File>
     <File Include="elements.html">
       <publishTime>04/05/2019 01:22:56</publishTime>
@@ -217,10 +220,10 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>04/05/2019 01:22:56</publishTime>
     </File>
     <File Include="IndexMovilidad.aspx">
-      <publishTime>04/10/2019 01:25:18</publishTime>
+      <publishTime>04/14/2019 12:40:30</publishTime>
     </File>
     <File Include="IndexPadre.aspx">
-      <publishTime>04/10/2019 01:11:52</publishTime>
+      <publishTime>04/14/2019 12:40:30</publishTime>
     </File>
     <File Include="LICENSE.txt">
       <publishTime>04/05/2019 01:22:55</publishTime>
@@ -229,19 +232,19 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>04/10/2019 01:45:39</publishTime>
     </File>
     <File Include="Logueo.aspx">
-      <publishTime>04/10/2019 02:14:16</publishTime>
+      <publishTime>04/12/2019 15:01:05</publishTime>
     </File>
     <File Include="MaestroMovilidad.Master">
-      <publishTime>04/10/2019 02:07:21</publishTime>
+      <publishTime>04/12/2019 14:58:41</publishTime>
     </File>
     <File Include="MaestroPadre.Master">
-      <publishTime>04/10/2019 02:06:47</publishTime>
+      <publishTime>04/14/2019 12:39:33</publishTime>
     </File>
     <File Include="master.Master">
-      <publishTime>04/10/2019 02:06:31</publishTime>
+      <publishTime>04/14/2019 01:26:39</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>04/10/2019 10:14:09</publishTime>
+      <publishTime>04/15/2019 01:41:58</publishTime>
     </File>
     <File Include="Prueba1.aspx">
       <publishTime>04/09/2019 23:18:00</publishTime>
@@ -252,11 +255,14 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
     <File Include="RecuperarContraseña.aspx">
       <publishTime>04/10/2019 00:38:04</publishTime>
     </File>
+    <File Include="RegistroMovilidad.aspx">
+      <publishTime>04/13/2019 22:34:21</publishTime>
+    </File>
     <File Include="RegistroPadre.aspx">
       <publishTime>04/07/2019 23:54:36</publishTime>
     </File>
     <File Include="RegistroUsuario.aspx">
-      <publishTime>04/10/2019 02:25:13</publishTime>
+      <publishTime>04/15/2019 01:40:56</publishTime>
     </File>
     <File Include="Web.config">
       <publishTime>04/09/2019 23:24:29</publishTime>

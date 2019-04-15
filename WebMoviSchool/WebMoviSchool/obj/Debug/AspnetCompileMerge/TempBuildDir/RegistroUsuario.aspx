@@ -20,16 +20,18 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style3">Tipo Documento (*):<asp:DropDownList ID="cboTipDoc" runat="server" Width="202px">
+                        <td class="auto-style3">Tipo Documento (*):<asp:DropDownList ID="cboTipDoc" runat="server" Width="202px" AutoPostBack="True" OnSelectedIndexChanged="cboTipDoc_SelectedIndexChanged">
                             </asp:DropDownList>
                         </td>
-                        <td class="auto-style3">Nro (*):<asp:TextBox ID="txtNro" runat="server" Height="31px" Width="230px"></asp:TextBox>
+                        <td class="auto-style3">Nro (*):<asp:TextBox ID="txtNro" runat="server" Height="31px" Width="230px" AutoPostBack="True" OnTextChanged="txtNro_TextChanged"></asp:TextBox>
+                            <asp:Label ID="lblNroVa" runat="server" Text="0"></asp:Label>
                         </td>
                         <td>Direccion :<asp:TextBox ID="txtDireccion" runat="server" Height="31px" Width="315px"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style3">Correo Electronico(*) :<asp:TextBox ID="txtCorreoElec" runat="server" Height="31px" Width="315px"></asp:TextBox>
+                        <td class="auto-style3">Correo Electronico(*) :<asp:TextBox ID="txtCorreoElec" runat="server" Height="31px" Width="315px" AutoPostBack="True" OnTextChanged="txtCorreoElec_TextChanged"></asp:TextBox>
+                            <asp:Label ID="lblCorreo" runat="server" Text="0"></asp:Label>
                         </td>
                         <td>Fecha Nacimiento :<div><asp:Calendar ID="datepicker" runat="server" Visible="False" OnSelectionChanged="datepicker_SelectionChanged" BackColor="White" BorderColor="Black" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="250px" NextPrevFormat="ShortMonth" Width="330px" BorderStyle="Solid" CellSpacing="1">
                             <DayHeaderStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" Height="8pt" />
@@ -64,7 +66,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style3">Usuario (*):<asp:TextBox ID="txtUsuario" runat="server" Height="31px" Width="315px"></asp:TextBox>
+                        <td class="auto-style3">Usuario (*):<asp:TextBox ID="txtUsuario" runat="server" Height="31px" Width="315px" Enabled="False"></asp:TextBox>
                         </td>
                         <td class="auto-style3">Password(*) :<asp:TextBox ID="txtPass"  runat="server" Height="31px" Width="315px" TextMode="Password"></asp:TextBox>
                         </td>
