@@ -59,7 +59,7 @@
                                         </asp:BoundField>
                                         <asp:BoundField DataField="RevTecnica" HeaderText="RevTec" Visible="False" />
                                         <asp:BoundField DataField="ImagenCarro" HeaderText="ImCarro" Visible="False" />
-                                        <asp:ButtonField ButtonType="Image" HeaderText="Ver Papeles" CommandName="VerPape">
+                                        <asp:ButtonField ButtonType="Image" HeaderText="Ver Papeles" CommandName="VerPape" ImageUrl="~/images/iconfinder_photos-r_86352 (1).png">
                                         <HeaderStyle ForeColor="White" />
                                         </asp:ButtonField>
                                     </Columns>

@@ -17,9 +17,7 @@ namespace WebMoviSchool
         negMovilidad negOMovilidad = new negMovilidad();
         negUsuario negUsuarios = new negUsuario();
         EntMovilidad usuar = new EntMovilidad();
-        Byte[] soat;
-        Byte[] ReveTec;
-        Byte[] fotoAuto;
+       
         string soatCade,ReveTecCade, fotoAutoCade;
 
 
