@@ -17,7 +17,7 @@
                              <asp:Button ID="Button1" CssClass="btn submit" runat="server" Text="Ingregar" OnClick="btnIngresar_Click" />
 	                         <asp:Button ID="btnCancelar" CssClass="btn submit" runat="server" Text="Cancelar" OnClick="btnCancelar_Click" />
 										
-                             <a href="#" class="bottom-text-w3ls">Forgot Password?</a>
+                             <a href="RecuperarContraseña.aspx" class="bottom-text-w3ls">Forgot Password?</a>
 
 
     

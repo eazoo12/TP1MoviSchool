@@ -53,5 +53,15 @@ namespace Capa_Negocio
             return objDatUsaurio.login(usuario, pass);
         }
 
+        public List<EntUsuario> SEL_CORR_CONTRA(string correo)
+        {
+            return objDatUsaurio.SEL_CORR_CONTRA(correo);
         }
+
+        public void UPD_CAMB_PW(int codUsuario, String pass)
+        {
+            objDatUsaurio.UPD_CAMB_PW(codUsuario, pass);
+        }
+
+    }
 }

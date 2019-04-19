@@ -245,5 +245,85 @@ namespace Capa_Datos
 
 
 
+        public List<EntUsuario> SEL_CORR_CONTRA(string correo)
+        {
+
+            List<EntUsuario> oListR = new List<EntUsuario>();
+
+            using (SqlConnection conex = new SqlConnection(datConexion.cad_con))
+            {
+                using (SqlCommand cmd = new SqlCommand("SEL_CORR_CONTRA", conex))
+                {
+                    conex.Open();
+                    cmd.Parameters.Add("@correo", SqlDbType.VarChar, 200).Value = correo;
+                  
+
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+
+                        int colcodUsurio = dr.GetOrdinal("codUsurio");
+                        
+
+
+                        int colCant = dr.FieldCount;
+                        object[] values = new object[colCant];
+                        EntUsuario oEntUsu = null;
+
+                        while (dr.Read())
+                        {
+                            oEntUsu = new EntUsuario();
+                            dr.GetValues(values);
+
+                            oEntUsu.Codigo = Convert.ToInt16(values[colcodUsurio]);
+                           
+                            /// oEntUsu.CodArea = Convert.ToInt32(values[colCodArea]);
+
+
+                            oListR.Add(oEntUsu);
+                        }
+                    }
+                }
+            }
+            return oListR;
+
+        }
+
+
+        public void UPD_CAMB_PW(int codUsuario, String pass)
+        {
+            try
+            {
+                using (SqlConnection conex = new SqlConnection(datConexion.cad_con))
+                {
+
+                    using (SqlCommand cmd = new SqlCommand("UPD_CAMB_PW", conex))
+                    {
+                        conex.Open();
+                        cmd.Parameters.Add("@codUsuario", SqlDbType.Int).Value = codUsuario;
+                        cmd.Parameters.Add("@pass", SqlDbType.VarChar, 20).Value = pass;
+
+
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.ExecuteNonQuery();
+
+                        conex.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+
+
+        }
+
+
+
     }
 }

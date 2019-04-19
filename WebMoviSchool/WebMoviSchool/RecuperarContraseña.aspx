@@ -6,7 +6,7 @@
         Si deseas restablecer tu contraseña, ingresa la dirección de correo registrada.<asp:TextBox ID="txtCorreo" runat="server" Width="338px"></asp:TextBox>
     </p>
     <p>
-        <asp:Button ID="btnEnviar" runat="server" Text="Enviar correo" />
+        <asp:Button ID="btnEnviar" runat="server" Text="Enviar correo" OnClick="btnEnviar_Click" />
         <br />
     </p>
 </asp:Content>
