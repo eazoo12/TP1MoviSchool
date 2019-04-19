@@ -24,5 +24,21 @@ namespace WebMoviSchool
             dgvMovilidaUsu.DataSource = negOmovilidad.SEL_MOVILIDAD_USUARIO(txtNombre.Text);
             dgvMovilidaUsu.DataBind();
         }
+
+        protected void dgvMovilidaUsu_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if(e.CommandName == "Ver")
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
+                string codUsuario = dgvMovilidaUsu.Rows[index].Cells[0].Text;
+
+               
+                    Session["COD_USUARIO_DE"] = codUsuario;
+              
+                
+
+                Response.Redirect("verDetalleMovi.aspx");
+            }
+        }
     }
 }

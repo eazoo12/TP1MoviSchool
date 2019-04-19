@@ -1,0 +1,89 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="verDetalleMovi.aspx.cs" Inherits="WebMoviSchool.verDetalleMovi" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <p>
+        <table style="width:100%;">
+            <tr>
+                <td class="align-center">Registro de Movilidad<br />
+                    <table style="width:100%;">
+                    <tr>
+                        <td class="auto-style3">Nombre y Apellido :
+                            <asp:Label ID="lblNombreApe" runat="server" Text="Label"></asp:Label>
+                        </td>
+                        <td class="align-left">&nbsp;Celular :
+                            <asp:Label ID="Celular" runat="server" Text="Label"></asp:Label>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="auto-style3">Corre Electronico:
+                            <asp:Label ID="lblCorreo" runat="server" Text="Label"></asp:Label>
+                        </td>
+                        
+                    </tr>
+                  
+                    </table>
+        
+                                      
+                    <table style="width:100%;">
+                        <tr>
+                            <td>
+                                Registro de Choferes
+                                <asp:GridView ID="dgvDeRegistroChofe" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False">
+                                    <AlternatingRowStyle BackColor="White" />
+                                    <Columns>
+                                        <asp:BoundField DataField="IdMovilidad" HeaderText="Cod. Movilida">
+                                        <HeaderStyle ForeColor="White" />
+                                        </asp:BoundField>
+                                        <asp:BoundField DataField="NombreChofer" HeaderText="Nombre Chofer">
+                                        <HeaderStyle ForeColor="White" />
+                                        </asp:BoundField>
+                                        <asp:BoundField DataField="NroDocumento" HeaderText="Nro. Documento">
+                                        <HeaderStyle ForeColor="White" />
+                                        </asp:BoundField>
+                                        <asp:BoundField DataField="Placa" HeaderText="Placa">
+                                        <HeaderStyle ForeColor="White" />
+                                        </asp:BoundField>
+                                        <asp:BoundField DataField="Capacidad" HeaderText="Capacidad">
+                                        <HeaderStyle ForeColor="White" />
+                                        </asp:BoundField>
+                                        <asp:BoundField DataField="DesColegio" HeaderText="Colegio">
+                                        <HeaderStyle ForeColor="White" />
+                                        </asp:BoundField>
+                                        <asp:BoundField DataField="DesDistrito" HeaderText="Distrito">
+                                        <HeaderStyle ForeColor="White" />
+                                        </asp:BoundField>
+                                        <asp:BoundField DataField="Soat" HeaderText="soat" Visible="False">
+                                        <HeaderStyle ForeColor="White" />
+                                        </asp:BoundField>
+                                        <asp:BoundField DataField="RevTecnica" HeaderText="RevTec" Visible="False" />
+                                        <asp:BoundField DataField="ImagenCarro" HeaderText="ImCarro" Visible="False" />
+                                        <asp:ButtonField ButtonType="Image" HeaderText="Ver Papeles">
+                                        <HeaderStyle ForeColor="White" />
+                                        </asp:ButtonField>
+                                    </Columns>
+                                    <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                                    <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                                    <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
+                                    <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
+                                    <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
+                                    <SortedAscendingCellStyle BackColor="#FDF5AC" />
+                                    <SortedAscendingHeaderStyle BackColor="#4D0000" />
+                                    <SortedDescendingCellStyle BackColor="#FCF6C0" />
+                                    <SortedDescendingHeaderStyle BackColor="#820000" />
+                                </asp:GridView>
+                            </td>
+                            
+                        </tr>
+                        
+                    </table>
+        
+                                      
+                </td>
+                
+            </tr>
+        </table>
+    </p>
+
+</asp:Content>

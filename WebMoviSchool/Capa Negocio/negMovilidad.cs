@@ -40,5 +40,16 @@ namespace Capa_Negocio
         }
 
 
+        public List<EntMovilidad> SEL_USUARIOPANEL_CONSUL(string Codigo)
+        {
+            return datOMovilidad.SEL_USUARIOPANEL_CONSUL(Codigo);
+        }
+
+        public List<EntMoviDetalleUsu> SEL_MOVI_DETA(string bus)
+        {
+            return datOMovilidad.SEL_MOVI_DETA(bus);
+        }
+
+
         }
 }

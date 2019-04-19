@@ -242,6 +242,120 @@ namespace Capa_Datos
 
 
 
+        public List<EntMovilidad> SEL_USUARIOPANEL_CONSUL(string Codigo)
+        {
+
+            List<EntMovilidad> oListR = new List<EntMovilidad>();
+
+            using (SqlConnection conex = new SqlConnection(datConexion.cad_con))
+            {
+                using (SqlCommand cmd = new SqlCommand("SEL_USUARIOPANEL_CONSUL", conex))
+                {
+                    conex.Open();
+                    cmd.Parameters.Add("@codUsuario", SqlDbType.Int).Value = Codigo;
+
+
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+
+                        int colnombreAp = dr.GetOrdinal("nombreAp");
+                        int colcelular = dr.GetOrdinal("celular");
+                        int colcorreoElec = dr.GetOrdinal("correoElec");
+                        //int colCodArea = dr.GetOrdinal("codArea");
+
+
+                        int colCant = dr.FieldCount;
+                        object[] values = new object[colCant];
+                        EntMovilidad oEntUsu = null;
+
+                        while (dr.Read())
+                        {
+                            oEntUsu = new EntMovilidad();
+                            dr.GetValues(values);
+
+                            oEntUsu.NombreAp = Convert.ToString(values[colnombreAp]);
+                            oEntUsu.Celular = Convert.ToString(values[colcelular]);
+                            oEntUsu.CorreoElec = Convert.ToString(values[colcorreoElec]);
+                            /// oEntUsu.CodArea = Convert.ToInt32(values[colCodArea]);
+
+
+                            oListR.Add(oEntUsu);
+                        }
+                    }
+                }
+            }
+            return oListR;
+
+        }
+
+
+
+
+        public List<EntMoviDetalleUsu> SEL_MOVI_DETA(string bus)
+        {
+
+            List<EntMoviDetalleUsu> oListR = new List<EntMoviDetalleUsu>();
+
+            using (SqlConnection conex = new SqlConnection(datConexion.cad_con))
+            {
+                using (SqlCommand cmd = new SqlCommand("SEL_MOVI_DETA", conex))
+                {
+                    conex.Open();
+                    cmd.Parameters.Add("@codUsuario", SqlDbType.Int).Value = bus;
+
+
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+
+                        int colidMovilidad = dr.GetOrdinal("idMovilidad");
+                        int colNombreChofer = dr.GetOrdinal("NombreChofer");
+                        int colNroDocumento = dr.GetOrdinal("NroDocumento");
+                        int colplaca = dr.GetOrdinal("placa");
+                        int colcapacidad = dr.GetOrdinal("capacidad");
+                        int coldesColegio = dr.GetOrdinal("desColegio");
+                        int coldesDistrito = dr.GetOrdinal("desDistrito");
+                      
+                        
+                        int colCant = dr.FieldCount;
+                        object[] values = new object[colCant];
+                        EntMoviDetalleUsu oEntUsu = null;
+
+                        while (dr.Read())
+                        {
+                            oEntUsu = new EntMoviDetalleUsu();
+                            dr.GetValues(values);
+
+                            oEntUsu.IdMovilidad = Convert.ToInt32(values[colidMovilidad]);
+                            oEntUsu.NombreChofer = Convert.ToString(values[colNombreChofer]);
+                            oEntUsu.NroDocumento = Convert.ToString(values[colNroDocumento]);
+                            oEntUsu.Placa = Convert.ToString(values[colplaca]);
+                            oEntUsu.Capacidad = Convert.ToInt32(values[colcapacidad]);
+                            oEntUsu.DesColegio = Convert.ToString(values[coldesColegio]);
+                            oEntUsu.DesDistrito = Convert.ToString(values[coldesDistrito]);
+
+                            /// oEntUsu.CodArea = Convert.ToInt32(values[colCodArea]);
+
+
+                            oListR.Add(oEntUsu);
+                        }
+                    }
+                }
+            }
+            return oListR;
+
+        }
+
+
+
+
 
     }
 }
