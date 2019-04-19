@@ -114,12 +114,17 @@
                         </td>
                     </tr>
                     <tr>
-                    <td class="col-6 col-12-small">Soat (*):<asp:FileUpload ID="FileUpload1" runat="server" />
+                    <td class="col-6 col-12-small">Soat (*):<asp:FileUpload ID="FileUpload1"  runat="server" />
                         </td>
-                        <td class="auto-style3">Placa :<asp:TextBox ID="txtPlaca" runat="server" Height="31px" Width="230px"></asp:TextBox>
+                        <td class="auto-style3">Placa (*):<asp:TextBox ID="txtPlaca" runat="server" Height="31px" Width="230px"></asp:TextBox>
                         </td>
-                        <td class="auto-style3">Rev. Tecnica :<asp:FileUpload ID="FileUploadRevtec" runat="server" />
+                        <td class="auto-style3">Rev. Tecnica (*):<asp:FileUpload ID="FileUploadRevtec" runat="server" />
                         </td>
+                  </tr>
+                  <tr>
+                    <td class="col-6 col-12-small">FotoAuto (*):<asp:FileUpload ID="FileUploadFotoAuto" runat="server" />
+                        </td>
+                        
                   </tr>
                     <tr>
                         <td class="auto-style3">

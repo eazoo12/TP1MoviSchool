@@ -9,6 +9,7 @@ using Capa_Entidad;
 using System.Data;
 using System.IO;
 using System.Configuration;
+using System.Drawing;
 //using System.Windows.Forms;
 
 namespace WebMoviSchool
@@ -141,36 +142,101 @@ namespace WebMoviSchool
             }
         }
 
+        public System.Drawing.Image RedimencionarImagen(System.Drawing.Image ImagenOriginal, int Alto)
+        {
+
+            var Radio = (double)Alto / ImagenOriginal.Height;
+            var NuevoAncho = (int)(ImagenOriginal.Width * Radio);
+            var NuevoAlto = (int)(ImagenOriginal.Height * Radio);
+            var NuevaImagenRedimencionada = new Bitmap(NuevoAncho, NuevoAlto);
+            var g = Graphics.FromImage(NuevaImagenRedimencionada);
+            g.DrawImage(ImagenOriginal, 0, 0, NuevoAncho, NuevoAlto);
+            return NuevaImagenRedimencionada;
+
+        }
+
+        public System.Drawing.Image byteArrayToImage(byte[] byteArrayIn)
+        {
+            MemoryStream ms = new MemoryStream(byteArrayIn);
+            System.Drawing.Image returnImage = System.Drawing.Image.FromStream(ms);
+            return returnImage;
+        }
+
+
         protected void Button1_Click(object sender, EventArgs e)
         {
             EntMovilidadRegistro oEntMovilidadReg = new EntMovilidadRegistro();
             HttpPostedFile postedFile = FileUpload1.PostedFile;
+
             string filaname = Path.GetFileName(postedFile.FileName);
             string fileExtension = Path.GetExtension(filaname);
             int fileSize = postedFile.ContentLength;
 
             
             HttpPostedFile postedFile2 = FileUploadRevtec.PostedFile;
+
             string filaname2 = Path.GetFileName(postedFile2.FileName);
             string fileExtension2 = Path.GetExtension(filaname2);
             int fileSize2 = postedFile2.ContentLength;
 
+            HttpPostedFile postedFile3 = FileUploadFotoAuto.PostedFile;
+            
+            string filaname3 = Path.GetFileName(postedFile3.FileName);
+            string fileExtension3 = Path.GetExtension(filaname3);
+            int fileSize3 = postedFile3.ContentLength;
 
-            if ((fileExtension.ToLower() == ".jpeg" || fileExtension.ToLower() == ".bmp" ||
+            if ((fileExtension.ToLower() == ".jpeg" || fileExtension.ToLower() == ".jpg" || fileExtension.ToLower() == ".bmp" ||
                 fileExtension.ToLower() == ".gif" || fileExtension.ToLower() == ".png")
-                && (fileExtension2.ToLower() == ".jpeg" || fileExtension2.ToLower() == ".bmp" ||
-                fileExtension2.ToLower() == ".gif" || fileExtension2.ToLower() == ".png"))
+                && (fileExtension2.ToLower() == ".jpeg" || fileExtension2.ToLower() == ".jpg"  || fileExtension2.ToLower() == ".bmp" ||
+                fileExtension2.ToLower() == ".gif" || fileExtension2.ToLower() == ".png")
+                && (fileExtension3.ToLower() == ".jpeg" || fileExtension3.ToLower() == ".jpg" || fileExtension3.ToLower() == ".bmp" ||
+                fileExtension3.ToLower() == ".gif" || fileExtension3.ToLower() == ".png"))
             {
+
+
                 Stream stream = postedFile.InputStream;
                 BinaryReader binaryReader = new BinaryReader(stream);
 
                 byte[] bytes = binaryReader.ReadBytes((int)stream.Length);
+                
+                
                 //Rev Tecnica
                 Stream stream2 = postedFile2.InputStream;
                 BinaryReader binaryReader2 = new BinaryReader(stream2);
 
                 byte[] bytes2 = binaryReader2.ReadBytes((int)stream2.Length);
 
+                // Foto auto 
+                Stream stream3 = postedFile3.InputStream;
+                BinaryReader binaryReader3 = new BinaryReader(stream3);
+
+                byte[] bytes3 = binaryReader3.ReadBytes((int)stream3.Length);
+
+                //// Conversion 
+
+                System.Drawing.Image imtThumbnail;
+                int TamanioThumbanail = 400;
+                imtThumbnail = RedimencionarImagen(byteArrayToImage(bytes), TamanioThumbanail);
+
+
+                System.Drawing.Image imtThumbnailRev;
+                imtThumbnailRev = RedimencionarImagen(byteArrayToImage(bytes2),TamanioThumbanail);
+
+                System.Drawing.Image imtThumbnailFotoAuto;
+                imtThumbnailFotoAuto = RedimencionarImagen(byteArrayToImage(bytes3), TamanioThumbanail);
+
+
+                byte[] bImagenThumbnail = new byte[TamanioThumbanail];
+                ImageConverter Convertidor = new ImageConverter();
+                bImagenThumbnail = (byte[])Convertidor.ConvertTo(imtThumbnail,typeof(byte[]));
+
+                byte[] bImagenThumbnail2 = new byte[TamanioThumbanail];
+                ImageConverter Convertidor2 = new ImageConverter();
+                bImagenThumbnail2 = (byte[])Convertidor2.ConvertTo(imtThumbnailRev, typeof(byte[]));
+
+                byte[] bImagenThumbnail3 = new byte[TamanioThumbanail];
+                ImageConverter Convertidor3 = new ImageConverter();
+                bImagenThumbnail3 = (byte[])Convertidor3.ConvertTo(imtThumbnailFotoAuto, typeof(byte[]));
 
                 //string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
                 oEntMovilidadReg.NombreChofer = txtChofer.Text;
@@ -178,14 +244,14 @@ namespace WebMoviSchool
                 oEntMovilidadReg.NroDocumento = txtNrDocumento.Text;
                 oEntMovilidadReg.Telefono = txtTelefono.Text;
                 oEntMovilidadReg.idColegio = Convert.ToInt16(cboColegio.SelectedValue);
-                oEntMovilidadReg.Soat = bytes;
+                oEntMovilidadReg.Soat = bImagenThumbnail;
                 oEntMovilidadReg.Placa = txtPlaca.Text;
-                oEntMovilidadReg.RevTecnica = bytes2;
+                oEntMovilidadReg.RevTecnica = bImagenThumbnail2;
                 oEntMovilidadReg.Marca = txtMarca.Text;
                 oEntMovilidadReg.Modelo = txtModelo.Text;
                 oEntMovilidadReg.Color = txtColor.Text;
                 oEntMovilidadReg.Capacidad = Convert.ToInt16(txtCapacidad.Text);
-                oEntMovilidadReg.FotoCarro = bytes;
+                oEntMovilidadReg.FotoCarro = bImagenThumbnail3;
                 oEntMovilidadReg.PapelRegla = 1;
                 oEntMovilidadReg.Dni = Session["DNI"].ToString();
 
@@ -200,8 +266,28 @@ namespace WebMoviSchool
             }
             else
             {
-                //MessageBox.Show("Complete todos los campos");
-                Response.Write("<script>alert('Complete todos los campos !!!!')</script>");
+                if((txtMarca.Text == "" || txtModelo.Text =="" || txtCapacidad.Text == "" || txtChofer.Text=="" || txtNrDocumento.Text =="")
+                )
+                {                    
+                        Response.Write("<script>alert('Complete todos los campos  !!!!')</script>");
+                                       
+                }
+                else if((fileExtension.ToLower() != ".jpeg" || fileExtension.ToLower() != ".jpg" || fileExtension.ToLower() != ".bmp" ||
+                fileExtension.ToLower() != ".gif" || fileExtension.ToLower() != ".png")
+                && (fileExtension2.ToLower() != ".jpeg" || fileExtension2.ToLower() == ".jpg" || fileExtension2.ToLower() != ".bmp" ||
+                fileExtension2.ToLower() != ".gif" || fileExtension2.ToLower() == ".png")
+                && (fileExtension3.ToLower() != ".jpeg" || fileExtension3.ToLower() != ".jpg" || fileExtension3.ToLower() != ".bmp" ||
+                fileExtension3.ToLower() != ".gif" || fileExtension3.ToLower() != ".png"))
+                {
+                    Response.Write("<script>alert('Solo puede usar .jpeg , .jpg, .bmp, .gif, .png')</script>");
+                }
+                else
+                {
+                    Response.Write("<script>alert('Complete todos los campos  !!!!')</script>");
+
+                }
+
+                
             }
 
         }

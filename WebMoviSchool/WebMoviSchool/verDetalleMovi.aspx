@@ -28,9 +28,9 @@
                                       
                     <table style="width:100%;">
                         <tr>
-                            <td>
-                                Registro de Choferes
-                                <asp:GridView ID="dgvDeRegistroChofe" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False">
+                            <td class="auto-style3">
+                                <h3>Registro de Choferes</h3>
+                                <asp:GridView ID="dgvDeRegistroChofe" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" OnRowCommand="dgvDeRegistroChofe_RowCommand">
                                     <AlternatingRowStyle BackColor="White" />
                                     <Columns>
                                         <asp:BoundField DataField="IdMovilidad" HeaderText="Cod. Movilida">
@@ -59,7 +59,7 @@
                                         </asp:BoundField>
                                         <asp:BoundField DataField="RevTecnica" HeaderText="RevTec" Visible="False" />
                                         <asp:BoundField DataField="ImagenCarro" HeaderText="ImCarro" Visible="False" />
-                                        <asp:ButtonField ButtonType="Image" HeaderText="Ver Papeles">
+                                        <asp:ButtonField ButtonType="Image" HeaderText="Ver Papeles" CommandName="VerPape">
                                         <HeaderStyle ForeColor="White" />
                                         </asp:ButtonField>
                                     </Columns>
@@ -73,6 +73,30 @@
                                     <SortedDescendingCellStyle BackColor="#FCF6C0" />
                                     <SortedDescendingHeaderStyle BackColor="#820000" />
                                 </asp:GridView>
+                                <table style="width:100%;">
+                                    <tr>
+                                        <td class="auto-style3">
+                                            <asp:Repeater ID="Repeater1" runat="server">
+                                                <ItemTemplate>
+
+                                                    <div class="auto-style3">
+                                                        <h3>SOAT</h3>
+                                                        <img class="image-responsive" src="data:image/jpg;base64,<%# Convert.ToBase64String((Byte[])DataBinder.Eval(Container.DataItem,"Soat")) %>" /><br />
+                                                        <h3>REVISION TENICA</h3>
+                                                        <img class="image-responsive" src="data:image/jpg;base64,<%# Convert.ToBase64String((Byte[])DataBinder.Eval(Container.DataItem,"revTecnica")) %>" /><br />
+                                                        <h3>FOTO DEL CARRO</h3>
+                                                        <img class="image-responsive" src="data:image/jpg;base64,<%# Convert.ToBase64String((Byte[])DataBinder.Eval(Container.DataItem,"fotoCarro")) %>" />
+         
+                                                        <br />
+                                                    </div>
+
+                                                </ItemTemplate>
+                                            </asp:Repeater>
+                                        </td>
+                                        
+                                    </tr>
+                                    
+                                </table>
                             </td>
                             
                         </tr>

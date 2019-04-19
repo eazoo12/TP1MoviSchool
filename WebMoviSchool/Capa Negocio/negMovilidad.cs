@@ -51,5 +51,11 @@ namespace Capa_Negocio
         }
 
 
+        public List<EntMoviDetalleUsu> SEL_IMAGEN_DETA(string codigoMovi)
+        {
+            return datOMovilidad.SEL_IMAGEN_DETA(codigoMovi);
         }
+
+
+    }
 }

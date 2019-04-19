@@ -355,6 +355,61 @@ namespace Capa_Datos
 
 
 
+        public List<EntMoviDetalleUsu> SEL_IMAGEN_DETA(string codigoMovi)
+        {
+
+            List<EntMoviDetalleUsu> oListR = new List<EntMoviDetalleUsu>();
+
+            using (SqlConnection conex = new SqlConnection(datConexion.cad_con))
+            {
+                using (SqlCommand cmd = new SqlCommand("SEL_IMAGEN_DETA", conex))
+                {
+                    conex.Open();
+                    cmd.Parameters.Add("@idMovilidad", SqlDbType.Int).Value = codigoMovi;
+
+
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+
+                        int colidMovilidad = dr.GetOrdinal("idMovilidad");
+                        int colSoat = dr.GetOrdinal("Soat");
+                        int colrevTecnica = dr.GetOrdinal("revTecnica");
+                        int colfotoCarro = dr.GetOrdinal("fotoCarro");
+
+
+                        int colCant = dr.FieldCount;
+                        object[] values = new object[colCant];
+                        EntMoviDetalleUsu oEntUsu = null;
+
+                        while (dr.Read())
+                        {
+                            oEntUsu = new EntMoviDetalleUsu();
+                            dr.GetValues(values);
+
+                            oEntUsu.IdMovilidad = Convert.ToInt32(values[colidMovilidad]);
+                            oEntUsu.Soat = Convert.ToString(values[colSoat]);
+                            oEntUsu.RevTecnica = Convert.ToString(values[colrevTecnica]);
+                            oEntUsu.ImagenCarro = Convert.ToString(values[colfotoCarro]);
+                            
+
+                            /// oEntUsu.CodArea = Convert.ToInt32(values[colCodArea]);
+
+
+                            oListR.Add(oEntUsu);
+                        }
+                    }
+                }
+            }
+            return oListR;
+
+        }
+
+
+
 
 
     }
