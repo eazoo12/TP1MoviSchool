@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table style="width:100%;">
         <tr>
-            <td>
+            <td class="auto-style3">
                 <asp:Label ID="Label1" runat="server" Text="Nombre"></asp:Label>
                 <asp:TextBox ID="txtNombre" runat="server" Height="25px" Width="222px"></asp:TextBox>
                 <br />
@@ -14,7 +14,7 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td>
+            <td class="auto-style3">
                 <asp:GridView ID="dgvMovilidaUsu" runat="server" CellPadding="4" class="auto-style3" AutoGenerateColumns="False" Width="893px" ForeColor="#333333" GridLines="None" OnRowCommand="dgvMovilidaUsu_RowCommand">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>

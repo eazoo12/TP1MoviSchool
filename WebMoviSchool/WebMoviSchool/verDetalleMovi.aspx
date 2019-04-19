@@ -5,7 +5,7 @@
     <p>
         <table style="width:100%;">
             <tr>
-                <td class="align-center">Registro de Movilidad<br />
+                <td class="align-center"><h3>Registro de Movilidad</h3><br />
                     <table style="width:100%;">
                     <tr>
                         <td class="auto-style3">Nombre y Apellido :

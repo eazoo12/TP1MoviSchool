@@ -11,7 +11,7 @@
 							<div class="input">
 								<span class="fa fa-key" aria-hidden="true"></span>
 								<%--<input type="password" placeholder="Password" name="password" required />--%>
-                                <asp:TextBox ID="txtContraseña" placeholder="Password" type="password" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtContraseña" placeholder="Password" type="password" runat="server" MaxLength="8"></asp:TextBox>
 							</div>
 							<%--<button type="submit" class="btn submit">Login</button>--%>
                              <asp:Button ID="Button1" CssClass="btn submit" runat="server" Text="Ingregar" OnClick="btnIngresar_Click" />
