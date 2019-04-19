@@ -266,20 +266,15 @@ namespace WebMoviSchool
             }
             else
             {
-                if((txtMarca.Text == "" || txtModelo.Text =="" || txtCapacidad.Text == "" || txtChofer.Text=="" || txtNrDocumento.Text =="")
-                )
-                {                    
-                        Response.Write("<script>alert('Complete todos los campos  !!!!')</script>");
-                                       
-                }
-                else if((fileExtension.ToLower() != ".jpeg" || fileExtension.ToLower() != ".jpg" || fileExtension.ToLower() != ".bmp" ||
+                
+                if((fileExtension.ToLower() != ".jpeg" || fileExtension.ToLower() != ".jpg" || fileExtension.ToLower() != ".bmp" ||
                 fileExtension.ToLower() != ".gif" || fileExtension.ToLower() != ".png")
                 && (fileExtension2.ToLower() != ".jpeg" || fileExtension2.ToLower() == ".jpg" || fileExtension2.ToLower() != ".bmp" ||
                 fileExtension2.ToLower() != ".gif" || fileExtension2.ToLower() == ".png")
                 && (fileExtension3.ToLower() != ".jpeg" || fileExtension3.ToLower() != ".jpg" || fileExtension3.ToLower() != ".bmp" ||
                 fileExtension3.ToLower() != ".gif" || fileExtension3.ToLower() != ".png"))
                 {
-                    Response.Write("<script>alert('Solo puede usar .jpeg , .jpg, .bmp, .gif, .png')</script>");
+                    Response.Write("<script>alert('Solo puede usar .jpeg , .jpg, .bmp, .gif, .png o Ingrese todos los archivos Corresctamente')</script>");
                 }
                 else
                 {
