@@ -1,16 +1,12 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PruebaMaster.master.cs" Inherits="WebMoviSchool.PruebaMaster" %>
 
 
-<!--Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <!DOCTYPE HTML>
 <html lang="en">
 
 <head runat="server">
-	<title>Triple Forms Responsive Widget Template :: w3layouts</title>
+	<title>Ingresar Al Sistema</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
@@ -46,7 +42,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <body>
 	<div class="main-bg">
 		<!-- title -->
-		<h1>Triple Forms</h1>
+		<h1>MOVI SCHOOL</h1>
 		<!-- //title -->
 		<div class="sub-main-w3">
 			<div class="image-style">
@@ -122,8 +118,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 		<!-- copyright -->
 		<div class="copyright">
-			<h2>&copy; 2019 Triple Forms. All rights reserved | Design by
-				<a href="http://w3layouts.com" target="_blank">W3layouts</a>
+			<h2>&copy;2019 Todos los derechos reservados Renzo Parraga
+				
 			</h2>
 		</div>
 		<!-- //copyright -->

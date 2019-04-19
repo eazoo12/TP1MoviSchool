@@ -331,7 +331,7 @@ label.icon-left-w3pvt span {
 }
 
 .legend {
-    color: #fff;
+    color: #000;
     font-size: 24px;
     text-align: center;
     margin-bottom: 1.2em;
@@ -388,8 +388,7 @@ p.para-style-2 a {
 
 .submit {
     margin: 2.3em auto 0;
-    background: #00ad45;
-    
+    background: #f56a6a;
     border: none;
     cursor: pointer;
     font-weight: 600;

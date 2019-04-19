@@ -1,6 +1,6 @@
 C:\Users\Renzo\Desktop\Git repositorio\TP1MoviSchool\WebMoviSchool\Capa Entidad\bin\Debug\Capa Entidad.dll
 C:\Users\Renzo\Desktop\Git repositorio\TP1MoviSchool\WebMoviSchool\Capa Entidad\bin\Debug\Capa Entidad.pdb
+C:\Users\Renzo\Desktop\Git repositorio\TP1MoviSchool\WebMoviSchool\Capa Entidad\obj\Debug\Capa Entidad.csprojAssemblyReference.cache
 C:\Users\Renzo\Desktop\Git repositorio\TP1MoviSchool\WebMoviSchool\Capa Entidad\obj\Debug\Capa Entidad.csproj.CoreCompileInputs.cache
 C:\Users\Renzo\Desktop\Git repositorio\TP1MoviSchool\WebMoviSchool\Capa Entidad\obj\Debug\Capa Entidad.dll
 C:\Users\Renzo\Desktop\Git repositorio\TP1MoviSchool\WebMoviSchool\Capa Entidad\obj\Debug\Capa Entidad.pdb
-C:\Users\Renzo\Desktop\Git repositorio\TP1MoviSchool\WebMoviSchool\Capa Entidad\obj\Debug\Capa Entidad.csprojAssemblyReference.cache

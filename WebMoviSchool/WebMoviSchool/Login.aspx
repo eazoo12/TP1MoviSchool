@@ -14,8 +14,8 @@
                                 <asp:TextBox ID="txtContraseña" placeholder="Password" type="password" runat="server" MaxLength="8"></asp:TextBox>
 							</div>
 							<%--<button type="submit" class="btn submit">Login</button>--%>
-                             <asp:Button ID="Button1" CssClass="btn submit" runat="server" Text="Ingregar" OnClick="btnIngresar_Click" />
-	                         <asp:Button ID="btnCancelar" CssClass="btn submit" runat="server" Text="Cancelar" OnClick="btnCancelar_Click" />
+                             <asp:Button ID="Button1" class="submit" runat="server" Text="Ingregar" OnClick="btnIngresar_Click" />
+	                         <asp:Button ID="btnCancelar" class="submit" runat="server" Text="Cancelar" OnClick="btnCancelar_Click" />
 										
                              <a href="RecuperarContraseña.aspx" class="bottom-text-w3ls">Forgot Password?</a>
 
