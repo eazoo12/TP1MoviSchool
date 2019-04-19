@@ -21,13 +21,13 @@
             <td>
                 <div class="align-center">
                  <p>
-                    <asp:Label ID="lblUsuario" runat="server" Text="Usuario"></asp:Label>
+                    <asp:Label ID="lblUsuario" runat="server" Text="Usuario" CssClass="auto-style3"></asp:Label>
                  </div>
             </td>
             <td>
                 <div class="align-center">
                  <p>
-                     <asp:TextBox ID="txtUsuario" runat="server" Height="28px" Width="371px"></asp:TextBox>
+                     <asp:TextBox ID="txtUsuario" runat="server" Height="28px" Width="371px" CssClass="auto-style3"></asp:TextBox>
                 </p>
                 </div>
             </td>
@@ -37,14 +37,14 @@
             <td>
                 <div class="align-center">
                      <p>
-                    <asp:Label ID="lblContraseña" runat="server" Text="Contraseña"></asp:Label>
+                    <asp:Label ID="lblContraseña" runat="server" Text="Contraseña" CssClass="auto-style3"></asp:Label>
                     </p>
                 </div>
              </td>
             <td>
                 <div class="align-center">
                     <p>
-                    <asp:TextBox ID="txtContraseña" runat="server" Height="28px" Width="383px" TextMode="Password" ></asp:TextBox>
+                    <asp:TextBox ID="txtContraseña" runat="server" Height="28px" Width="383px" TextMode="Password" CssClass="auto-style3"></asp:TextBox>
                         </p>
                 </div>
             </td>

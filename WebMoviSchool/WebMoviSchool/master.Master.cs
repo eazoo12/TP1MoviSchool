@@ -18,7 +18,7 @@ namespace WebMoviSchool
         {
             if (Session["ID_TIPOUSU"] == null)
             {
-                Response.Redirect("Logueo.aspx");
+                Response.Redirect("Login.aspx");
                 
             }
             

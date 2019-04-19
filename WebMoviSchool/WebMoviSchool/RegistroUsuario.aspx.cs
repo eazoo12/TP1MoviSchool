@@ -89,7 +89,9 @@ namespace WebMoviSchool
                     //MessageBox.Show("Registro exitoso");
                 Response.Write("<script>alert('Registro exitoso !!!!')</script>");
 
-                Response.Redirect("RegistroUsuario.aspx");
+               // Response.Redirect("RegistroUsuario.aspx");
+
+                Response.Write("<script>alert('Registro exitoso !!!!')</script>");
                 }
                 else
                 {

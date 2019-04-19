@@ -3292,15 +3292,15 @@ input, select, textarea {
 
 /* Header */
 
-	#header {
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		border-bottom: solid 5px #f56a6a;
-		padding: 6em 0 1em 0;
-		position: relative;
-	}
+#header {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    border-bottom: solid 5px #00ad45;
+    padding: 6em 0 1em 0;
+    position: relative;
+}
 
 		#header > * {
 			-moz-flex: 1;
