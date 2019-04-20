@@ -19,6 +19,10 @@ namespace WebMoviSchool
         int encontro;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (((string)Session["ID_TIPOUSU"]) == "4")
+            {
+                Response.Redirect("IndexPadre.aspx");
+            }
 
 
             if (!IsPostBack)

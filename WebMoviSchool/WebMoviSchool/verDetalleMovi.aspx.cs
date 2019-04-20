@@ -24,6 +24,20 @@ namespace WebMoviSchool
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            if (Session["ID_TIPOUSU"] != null)
+            {
+                btnComentar.Visible = true;
+                btnVeComentario.Visible = false;
+                //Response.Redirect("IndexPadre.aspx");
+            }
+            else if(Session["ID_TIPOUSU"] == null)
+            {
+                btnComentar.Visible = false;
+                btnVeComentario.Visible = true;
+                //Response.Redirect("index.aspx");
+            }
+
+
             List<EntMovilidad> login = new List<EntMovilidad>();
 
             if (Session["COD_USUARIO_DE"] != null)

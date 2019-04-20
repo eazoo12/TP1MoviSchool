@@ -16,7 +16,18 @@ namespace WebMoviSchool
         string distritoid;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            //if (Session["ID_TIPOUSU"] != null)
+            //{
+
+            //   // Response.Redirect("ConsultaMovilidad.aspx");
+            //}
+            //else 
+            //if (Session["ID_TIPOUSU"] == null)
+            //{
+                
+            //    Response.Redirect("index.aspx");
+            //}
+
             if (!IsPostBack)
             {
 

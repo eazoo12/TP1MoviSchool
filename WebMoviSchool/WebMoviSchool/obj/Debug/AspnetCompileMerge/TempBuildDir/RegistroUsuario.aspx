@@ -68,9 +68,9 @@
                     <tr>
                         <td class="auto-style3">Usuario (*):<asp:TextBox ID="txtUsuario" runat="server" Height="31px" Width="315px" Enabled="False"></asp:TextBox>
                         </td>
-                        <td class="auto-style3">Password(*) :<asp:TextBox ID="txtPass"  runat="server" Height="31px" Width="315px" TextMode="Password"></asp:TextBox>
+                        <td class="auto-style3">Password(*) :<asp:TextBox ID="txtPass"  runat="server" Height="31px" Width="315px" TextMode="Password" MaxLength="8"></asp:TextBox>
                         </td>
-                        <td>Repite Password (*):<asp:TextBox ID="txtRepass" runat="server" Height="31px" Width="315px" TextMode="Password"></asp:TextBox>
+                        <td>Repite Password (*):<asp:TextBox ID="txtRepass" runat="server" Height="31px" Width="315px" TextMode="Password" MaxLength="8"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
