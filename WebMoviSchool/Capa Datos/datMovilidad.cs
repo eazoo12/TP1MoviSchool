@@ -134,7 +134,7 @@ namespace Capa_Datos
 
 
 
-        public List<EntBMovilidadUs> SEL_MOVILIDAD_USUARIO(string bus)
+        public List<EntBMovilidadUs> SEL_MOVILIDAD_USUARIO(string bus, int idDistrito,string nomColegio, int TipoBu)
         {
 
             List<EntBMovilidadUs> oListR = new List<EntBMovilidadUs>();
@@ -145,7 +145,9 @@ namespace Capa_Datos
                 {
                     conex.Open();
                     cmd.Parameters.Add("@nombre", SqlDbType.VarChar,50).Value = bus;
-
+                    cmd.Parameters.Add("@idDistrito", SqlDbType.Int).Value = idDistrito;
+                    cmd.Parameters.Add("@nombreColegio", SqlDbType.VarChar,20).Value = nomColegio;
+                    cmd.Parameters.Add("@TIPBUS", SqlDbType.Int).Value = TipoBu;
 
 
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -295,7 +297,7 @@ namespace Capa_Datos
 
 
 
-        public List<EntMoviDetalleUsu> SEL_MOVI_DETA(string bus)
+        public List<EntMoviDetalleUsu> SEL_MOVI_DETA(string bus, string iddistrito, string nomColegio)
         {
 
             List<EntMoviDetalleUsu> oListR = new List<EntMoviDetalleUsu>();
@@ -306,8 +308,8 @@ namespace Capa_Datos
                 {
                     conex.Open();
                     cmd.Parameters.Add("@codUsuario", SqlDbType.Int).Value = bus;
-
-
+                    cmd.Parameters.Add("@idDistrito", SqlDbType.Int).Value = iddistrito;
+                    cmd.Parameters.Add("@nombreColeg", SqlDbType.VarChar,100).Value = nomColegio;
 
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();

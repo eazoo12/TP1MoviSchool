@@ -29,9 +29,9 @@ namespace Capa_Negocio
             datOMovilidad.INS_MOVILIDAD(oEntUsuario, opc);
         }
 
-        public List<EntBMovilidadUs> SEL_MOVILIDAD_USUARIO(string bus)
+        public List<EntBMovilidadUs> SEL_MOVILIDAD_USUARIO(string bus, int idDistrito, string nomColegio, int TipoBu)
         {
-            return datOMovilidad.SEL_MOVILIDAD_USUARIO(bus);
+            return datOMovilidad.SEL_MOVILIDAD_USUARIO(bus, idDistrito, nomColegio, TipoBu);
         }
 
         public List<EntUsuario> SEL_NRO_CORREO(string nroDocument, string correo)
@@ -45,9 +45,9 @@ namespace Capa_Negocio
             return datOMovilidad.SEL_USUARIOPANEL_CONSUL(Codigo);
         }
 
-        public List<EntMoviDetalleUsu> SEL_MOVI_DETA(string bus)
+        public List<EntMoviDetalleUsu> SEL_MOVI_DETA(string bus, string iddistrito, string nomColegio)
         {
-            return datOMovilidad.SEL_MOVI_DETA(bus);
+            return datOMovilidad.SEL_MOVI_DETA(bus, iddistrito, nomColegio);
         }
 
 

@@ -45,7 +45,7 @@ namespace WebMoviSchool
                     Celular.Text = login[0].Celular;
                     lblCorreo.Text = login[0].CorreoElec;
 
-                    dgvDeRegistroChofe.DataSource = negOMovilidad.SEL_MOVI_DETA(Session["COD_USUARIO_DE"].ToString());
+                    dgvDeRegistroChofe.DataSource = negOMovilidad.SEL_MOVI_DETA(Session["COD_USUARIO_DE"].ToString(), Session["ID_DISTRITO_DETA"].ToString(), Session["ID_COLEGIO_DETA"].ToString());
                     dgvDeRegistroChofe.DataBind();
 
                     
