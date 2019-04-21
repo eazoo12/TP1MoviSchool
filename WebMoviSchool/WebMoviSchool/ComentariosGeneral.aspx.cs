@@ -32,10 +32,7 @@ namespace WebMoviSchool
                 }
                 else
                 {
-                    //tipPersona = Convert.ToString(login[0].TipoUsuario);
-                    //usuar.NombreAp = lblNombreApe.Text;
-                    //usuar.Celular = Celular.Text;
-                    //usuar.CorreoElec = lblCorreo.Text;
+                   
                     lblNombreApe.Text = login[0].NombreAp;
                     Celular.Text = login[0].Celular;
                     lblCorreo.Text = login[0].CorreoElec;
