@@ -39,7 +39,48 @@
                         </td>
                         
                     </tr>
-                        
+                    <tr>
+                        <td> 
+                            <asp:Panel ID="panelPun" runat="server" Visible="False">
+                                 <p class="clasificacion" typeof="radio">
+                                    <asp:RadioButtonList ID="rdbComentario" runat="server" RepeatDirection="Horizontal">
+                                        <asp:ListItem Value="5">5 ★</asp:ListItem>
+                                        <asp:ListItem Value="4">4 ★</asp:ListItem>
+                                        <asp:ListItem Value="3">3 ★</asp:ListItem>
+                                        <asp:ListItem Value="2">2 ★</asp:ListItem>
+                                        <asp:ListItem Value="1">1 ★</asp:ListItem>
+                                    </asp:RadioButtonList>
+
+                                  
+                                     <asp:Button ID="btnVotar" runat="server" Text="Votación" OnClick="btnVotar_Click" Width="172px" />
+
+                                  
+                                    </p>
+
+                            </asp:Panel>
+                               
+
+                                
+                                    
+                                <%--<input id="radio1" type="radio" name="estrellas" value="5" ><!--
+                                --><label for="radio1">★</label><!--
+                                --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                                --><label for="radio2">★</label><!--
+                                --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                                --><label for="radio3">★</label><!--
+                                --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                                --><label for="radio4">★</label><!--
+                                --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                                --><label for="radio5">★</label>--%>
+                              
+
+                        </td>
+                        <td><h3> <asp:Label ID="lblVolorasCom" runat="server" Text="0">Si Desea Votar Inicie Sesión</asp:Label>  </h3>
+                            <h3>Valoracion de la Movilidad <asp:Label ID="lblPuntos" runat="server" Text="0"></asp:Label>
+
+                             </h3></td>
+                    </tr>
+                                            
                   
                     </table>
         

@@ -476,7 +476,7 @@ namespace Capa_Datos
                     using (SqlCommand cmd = new SqlCommand("INS_COMENTARIO", conex))
                     {
                         conex.Open();
-                        cmd.Parameters.Add("@comentario", SqlDbType.VarChar, 100).Value = oMovilidad.DesComentario;
+                        cmd.Parameters.Add("@comentario", SqlDbType.VarChar, 500).Value = oMovilidad.DesComentario;
                         cmd.Parameters.Add("@codUsuarioMovi", SqlDbType.Int).Value = oMovilidad.CodUsurio;
                         cmd.Parameters.Add("@dniPadre", SqlDbType.VarChar, 20).Value = oMovilidad.NroDocumento;
                         cmd.Parameters.Add("@opc", SqlDbType.Int).Value = opc;
@@ -494,6 +494,91 @@ namespace Capa_Datos
                 throw new Exception(ex.Message);
             }
 
+
+        }
+
+
+
+        public void INS_PUNTUACION(string dni, int codUsuario, int puntaje, int opc)
+        {
+            try
+            {
+                using (SqlConnection conex = new SqlConnection(datConexion.cad_con))
+                {
+
+                    using (SqlCommand cmd = new SqlCommand("INS_PUNTUACION", conex))
+                    {
+                        conex.Open();
+                        cmd.Parameters.Add("@dni", SqlDbType.Int).Value = dni;
+                        cmd.Parameters.Add("@codUsuario", SqlDbType.VarChar,20).Value = codUsuario;
+                        cmd.Parameters.Add("@puntaje", SqlDbType.Int).Value = puntaje;
+                        cmd.Parameters.Add("@opc", SqlDbType.Int).Value = opc;
+
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.ExecuteNonQuery();
+
+                        conex.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+
+
+        }
+
+
+
+        public List<EntPuntuacion> SEL_TOTALVoto(string codUsuario)
+        {
+            
+            List<EntPuntuacion> oListR = new List<EntPuntuacion>();
+
+            using (SqlConnection conex = new SqlConnection(datConexion.cad_con))
+            {
+                using (SqlCommand cmd = new SqlCommand("SEL_TOTALVoto", conex))
+                {
+                    conex.Open();
+                    cmd.Parameters.Add("@codUsuarioMovi", SqlDbType.Int).Value = codUsuario;
+
+
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+
+                        int colPromedio = dr.GetOrdinal("Promedio");
+                        int colcodUsurio = dr.GetOrdinal("codUsurio");
+
+
+
+                        int colCant = dr.FieldCount;
+                        object[] values = new object[colCant];
+                        EntPuntuacion oEntUsu = null;
+
+                        while (dr.Read())
+                        {
+                            oEntUsu = new EntPuntuacion();
+
+                            dr.GetValues(values);
+
+                            oEntUsu.promedio = Convert.ToInt32(values[colPromedio]);
+                            oEntUsu.codUsurio = Convert.ToInt32(values[colcodUsurio]);
+
+                            /// oEntUsu.CodArea = Convert.ToInt32(values[colCodArea]);
+
+
+                            oListR.Add(oEntUsu);
+                        }
+                    }
+                }
+            }
+            return oListR;
 
         }
 

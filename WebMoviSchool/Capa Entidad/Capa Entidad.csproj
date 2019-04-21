@@ -46,6 +46,7 @@
     <Compile Include="EntMoviDetalleUsu.cs" />
     <Compile Include="EntMovilidad.cs" />
     <Compile Include="EntMovilidadRegistro.cs" />
+    <Compile Include="EntPuntuacion.cs" />
     <Compile Include="EntUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -29,17 +29,21 @@ namespace WebMoviSchool
                 btnComentar.Visible = true;
                 btnVeComentario.Visible = false;
                 //Response.Redirect("IndexPadre.aspx");
+                panelPun.Visible = true;
+                lblVolorasCom.Visible = false;
             }
             else if(Session["ID_TIPOUSU"] == null)
             {
                 btnComentar.Visible = false;
                 btnVeComentario.Visible = true;
                 //Response.Redirect("index.aspx");
+                panelPun.Visible = false;
+                lblVolorasCom.Visible = true;
             }
 
 
             List<EntMovilidad> login = new List<EntMovilidad>();
-
+            
             if (Session["COD_USUARIO_DE"] != null)
             {
                 login = negOMovilidad.SEL_USUARIOPANEL_CONSUL(Session["COD_USUARIO_DE"].ToString());
@@ -58,6 +62,10 @@ namespace WebMoviSchool
                     lblNombreApe.Text = login[0].NombreAp;
                     Celular.Text = login[0].Celular;
                     lblCorreo.Text = login[0].CorreoElec;
+
+                    valorar();
+
+
 
                     dgvDeRegistroChofe.DataSource = negOMovilidad.SEL_MOVI_DETA(Session["COD_USUARIO_DE"].ToString(), Session["ID_DISTRITO_DETA"].ToString(), Session["ID_COLEGIO_DETA"].ToString());
                     dgvDeRegistroChofe.DataBind();
@@ -88,6 +96,31 @@ namespace WebMoviSchool
         protected void btnComentar_Click(object sender, EventArgs e)
         {
             Response.Redirect("ComentariosGeneral.aspx");
+        }
+        public void valorar()
+        {
+            List<EntPuntuacion> puntua = new List<EntPuntuacion>();
+            puntua = negOMovilidad.SEL_TOTALVoto(Session["COD_USUARIO_DE"].ToString());
+
+            if (puntua.Count == 0)
+            {
+                lblPuntos.Text = "0";
+            }
+            else
+            {
+                lblPuntos.Text = Convert.ToString(puntua[0].promedio);
+            }
+
+        }
+
+        protected void btnVotar_Click(object sender, EventArgs e)
+        {
+            if (rdbComentario.SelectedValue != "0")
+            {
+
+                negOMovilidad.INS_PUNTUACION(Session["DNI"].ToString(), Convert.ToInt32(Session["COD_USUARIO_DE"].ToString()), Convert.ToInt32(rdbComentario.SelectedValue), 1);
+                valorar();
+            }
         }
 
         public void ConsultaImagen(string cod)

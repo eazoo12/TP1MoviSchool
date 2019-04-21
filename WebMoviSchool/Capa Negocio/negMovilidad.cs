@@ -66,5 +66,15 @@ namespace Capa_Negocio
             datOMovilidad.INS_COMENTARIO(oMovilidad, opc);
         }
 
+        public void INS_PUNTUACION(string dni, int codUsuario, int puntaje, int opc)
+        {
+            datOMovilidad.INS_PUNTUACION(dni, codUsuario, puntaje, opc);
+        }
+
+        public List<EntPuntuacion> SEL_TOTALVoto(string codUsuario)
+        {
+            return datOMovilidad.SEL_TOTALVoto(codUsuario);
+        }
+
     }
 }
