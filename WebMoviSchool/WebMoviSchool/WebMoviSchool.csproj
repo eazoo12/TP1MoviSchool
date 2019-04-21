@@ -97,6 +97,7 @@
     <Content Include="assets\sass\libs\_vars.scss" />
     <Content Include="assets\sass\libs\_vendor.scss" />
     <Content Include="assets\sass\main.scss" />
+    <Content Include="ComentariosGeneral.aspx" />
     <Content Include="ConsultaMovilidad.aspx" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\style.css" />
@@ -162,6 +163,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CCorreo.cs" />
+    <Compile Include="ComentariosGeneral.aspx.cs">
+      <DependentUpon>ComentariosGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComentariosGeneral.aspx.designer.cs">
+      <DependentUpon>ComentariosGeneral.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ConsultaMovilidad.aspx.cs">
       <DependentUpon>ConsultaMovilidad.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

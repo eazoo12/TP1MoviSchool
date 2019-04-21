@@ -80,8 +80,15 @@ namespace WebMoviSchool
 
         }
 
-       
-        
+        protected void btnVeComentario_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ComentariosGeneral.aspx");
+        }
+
+        protected void btnComentar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ComentariosGeneral.aspx");
+        }
 
         public void ConsultaImagen(string cod)
         {

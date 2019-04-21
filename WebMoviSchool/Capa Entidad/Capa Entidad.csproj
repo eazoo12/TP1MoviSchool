@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntBMovilidadUs.cs" />
+    <Compile Include="EntComentario.cs" />
+    <Compile Include="EntComentarioRegistro.cs" />
     <Compile Include="EntMoviDetalleUsu.cs" />
     <Compile Include="EntMovilidad.cs" />
     <Compile Include="EntMovilidadRegistro.cs" />

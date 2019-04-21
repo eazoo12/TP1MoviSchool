@@ -412,6 +412,93 @@ namespace Capa_Datos
 
 
 
+        public List<EntComentario> SEL_COMENTARIO(string codUsuario)
+        {
+
+            List<EntComentario> oListR = new List<EntComentario>();
+
+            using (SqlConnection conex = new SqlConnection(datConexion.cad_con))
+            {
+                using (SqlCommand cmd = new SqlCommand("SEL_COMENTARIO", conex))
+                {
+                    conex.Open();
+                    cmd.Parameters.Add("@codUsuario", SqlDbType.Int).Value = codUsuario;
+
+
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+
+                        int colidComentario = dr.GetOrdinal("idComentario");
+                        int coldesComentario = dr.GetOrdinal("desComentario");
+                        int colNombrePadre = dr.GetOrdinal("NombrePadre");
+                        
+
+
+                        int colCant = dr.FieldCount;
+                        object[] values = new object[colCant];
+                        EntComentario oEntUsu = null;
+
+                        while (dr.Read())
+                        {
+                            oEntUsu = new EntComentario();
+                            dr.GetValues(values);
+
+                            oEntUsu.IdComentario = Convert.ToInt32(values[colidComentario]);
+                            oEntUsu.DesComentario = Convert.ToString(values[coldesComentario]);
+                            oEntUsu.NombrePadre = Convert.ToString(values[colNombrePadre]);
+                           
+
+
+                            /// oEntUsu.CodArea = Convert.ToInt32(values[colCodArea]);
+
+
+                            oListR.Add(oEntUsu);
+                        }
+                    }
+                }
+            }
+            return oListR;
+
+        }
+
+
+        public void INS_COMENTARIO(EntComentarioRegistro oMovilidad, int opc)
+        {
+            try
+            {
+                using (SqlConnection conex = new SqlConnection(datConexion.cad_con))
+                {
+
+                    using (SqlCommand cmd = new SqlCommand("INS_COMENTARIO", conex))
+                    {
+                        conex.Open();
+                        cmd.Parameters.Add("@comentario", SqlDbType.VarChar, 100).Value = oMovilidad.DesComentario;
+                        cmd.Parameters.Add("@codUsuarioMovi", SqlDbType.Int).Value = oMovilidad.CodUsurio;
+                        cmd.Parameters.Add("@dniPadre", SqlDbType.VarChar, 20).Value = oMovilidad.NroDocumento;
+                        cmd.Parameters.Add("@opc", SqlDbType.Int).Value = opc;
+                        
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.ExecuteNonQuery();
+
+                        conex.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+
+
+        }
+
+
+
 
 
     }

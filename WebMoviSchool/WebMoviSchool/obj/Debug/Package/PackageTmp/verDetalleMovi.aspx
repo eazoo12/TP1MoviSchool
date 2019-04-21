@@ -2,6 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+        
+
     <p>
         <table style="width:100%;">
             <tr>
@@ -20,8 +23,23 @@
                         <td class="auto-style3">Corre Electronico:
                             <asp:Label ID="lblCorreo" runat="server" Text="Label"></asp:Label>
                         </td>
+                        <td  class="auto-style3">
+
+                            
+
+                            <asp:Label ID="Label1" runat="server" Text="Para comentar Ingresa o Registrate al Sistema"></asp:Label>
+                            <asp:Button ID="btnVeComentario" runat="server" Text="Ver Comentario" OnClick="btnVeComentario_Click" />
+
+                            
+
+                            <asp:Button ID="btnComentar" runat="server" Text="Comentar" Visible="False" OnClick="btnComentar_Click" />
+
+                            
+
+                        </td>
                         
                     </tr>
+                        
                   
                     </table>
         
@@ -97,6 +115,15 @@
                                     </tr>
                                     
                                 </table>
+
+                                <tr>
+                            <td>
+                                <div id="fb-root"></div>
+                                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.2"></script>
+                                <div class="fb-comments" data-href="http://190.233.254.125:8080/verDetalleMovi.aspx" data-numposts="5" data-include-parent="true"></div>
+
+                            </td>
+                        </tr>
                             </td>
                             
                         </tr>

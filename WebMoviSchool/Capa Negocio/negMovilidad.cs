@@ -10,7 +10,7 @@ namespace Capa_Negocio
 {
     public class negMovilidad
     {
-        datMovilidad datOMovilidad = new datMovilidad(); 
+        datMovilidad datOMovilidad = new datMovilidad();
 
         public List<EntMovilidad> SEL_USUARIOPANEL(string dni)
         {
@@ -56,6 +56,15 @@ namespace Capa_Negocio
             return datOMovilidad.SEL_IMAGEN_DETA(codigoMovi);
         }
 
+        public List<EntComentario> SEL_COMENTARIO(string codUsuario)
+        {
+            return datOMovilidad.SEL_COMENTARIO(codUsuario);
+        }
+
+        public void INS_COMENTARIO(EntComentarioRegistro oMovilidad, int opc)
+        {
+            datOMovilidad.INS_COMENTARIO(oMovilidad, opc);
+        }
 
     }
 }

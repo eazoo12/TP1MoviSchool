@@ -2,6 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+        
+
     <p>
         <table style="width:100%;">
             <tr>
@@ -25,11 +28,11 @@
                             
 
                             <asp:Label ID="Label1" runat="server" Text="Para comentar Ingresa o Registrate al Sistema"></asp:Label>
-                            <asp:Button ID="btnVeComentario" runat="server" Text="Ver Comentario" />
+                            <asp:Button ID="btnVeComentario" runat="server" Text="Ver Comentario" OnClick="btnVeComentario_Click" />
 
                             
 
-                            <asp:Button ID="btnComentar" runat="server" Text="Comentar" Visible="False" />
+                            <asp:Button ID="btnComentar" runat="server" Text="Comentar" Visible="False" OnClick="btnComentar_Click" />
 
                             
 
