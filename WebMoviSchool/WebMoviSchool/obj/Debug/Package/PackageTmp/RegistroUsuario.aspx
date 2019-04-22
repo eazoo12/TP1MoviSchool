@@ -12,28 +12,56 @@
                 
                     <table class="auto-style4">
                     <tr>
-                        <td class="col-6 col-12-small">Nombre (*):<asp:TextBox ID="txtNombre" runat="server" Height="31px" Width="256px"></asp:TextBox>
+                        <td class="col-6 col-12-small" style="width: 431px">Nombre (*):<asp:TextBox ID="txtNombre" runat="server" Height="31px" Width="256px"
+                            pattern="[A-Z a-z]{3,100}" 
+                            oninvalid="setCustomValidity('Ingrese solo texto')"
+                            oninput="setCustomValidity('')"
+                            ></asp:TextBox>
                         </td>
-                        <td class="auto-style3">Apellidos :<asp:TextBox ID="txtApellido" runat="server" Height="31px" Width="230px"></asp:TextBox>
+                        <td class="auto-style3">Apellidos :<asp:TextBox ID="txtApellido" runat="server" Height="31px" Width="230px"
+                            pattern="[A-Z a-z]{3,100}" 
+                            oninvalid="setCustomValidity('Ingrese solo texto')"
+                            oninput="setCustomValidity('')"
+                            ></asp:TextBox>
                         </td>
-                        <td>Nro. Celular :<asp:TextBox ID="txtNrocelular" runat="server" Height="31px" Width="230px"></asp:TextBox>
+                        <td>Nro. Celular :<asp:TextBox ID="txtNrocelular" placeholder="Ingrese Nro" runat="server" Height="31px" Width="230px" MaxLength="9"
+                            pattern="[0-9]{9}" 
+                            oninvalid="setCustomValidity('Debe ingresar solo digitos')"
+                            oninput="setCustomValidity('')"
+                            ></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style3">Tipo Documento (*):<asp:DropDownList ID="cboTipDoc" runat="server" Width="202px" AutoPostBack="True" OnSelectedIndexChanged="cboTipDoc_SelectedIndexChanged">
+                        <td class="auto-style3">Tipo Documento (*):<asp:DropDownList ID="cboTipDoc" runat="server" Width="202px" AutoPostBack="True" OnSelectedIndexChanged="cboTipDoc_SelectedIndexChanged" OnTextChanged="cboTipDoc_TextChanged">
                             </asp:DropDownList>
                         </td>
-                        <td class="auto-style3">Nro (*):<asp:TextBox ID="txtNro" runat="server" Height="31px" Width="230px" AutoPostBack="True" OnTextChanged="txtNro_TextChanged"></asp:TextBox>
+                        <td class="auto-style3">Nro (*):<asp:TextBox ID="txtNro" placeholder="Ingrese Nro Doc" runat="server" Height="31px" Width="230px" AutoPostBack="True" OnTextChanged="txtNro_TextChanged"
+                            pattern="[0-9]{8}" 
+                            oninvalid="setCustomValidity('Debe ingresar solo digitos')"
+                            oninput="setCustomValidity('')"
+                            ></asp:TextBox>
                             <asp:Label ID="lblNroVa" runat="server" Text="0"></asp:Label>
                         </td>
-                        <td>Direccion :<asp:TextBox ID="txtDireccion" runat="server" Height="31px" Width="315px"></asp:TextBox>
+                        <td>Direccion :<asp:TextBox ID="txtDireccion" placeholder="Ingrese Dirección" runat="server" Height="31px" Width="315px"
+                            
+                            pattern="{8,100}"
+                            oninvalid="setCustomValidity('Debe ingresar direccion')"
+                            oninput="setCustomValidity('')"
+
+                            ></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style3">Correo Electronico(*) :<asp:TextBox ID="txtCorreoElec" runat="server" Height="31px" Width="315px" AutoPostBack="True" OnTextChanged="txtCorreoElec_TextChanged"></asp:TextBox>
-                            <asp:Label ID="lblCorreo" runat="server" Text="0"></asp:Label>
+                        <td class="auto-style3">Correo Electronico(*) :<asp:TextBox ID="txtCorreoElec" placeholder="Ingrese correo" runat="server" Height="31px" Width="315px" AutoPostBack="True" OnTextChanged="txtCorreoElec_TextChanged"></asp:TextBox>
+                            <asp:Label ID="lblCorreo" runat="server" Text="0"
+                                pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
+                                oninvalid="setCustomValidity('Ingresar correo valido')"
+                                oninput="setCustomValidity('')"
+                                ></asp:Label>
                         </td>
-                        <td>Fecha Nacimiento :<div><asp:Calendar ID="datepicker" runat="server" Visible="False" OnSelectionChanged="datepicker_SelectionChanged" BackColor="White" BorderColor="Black" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="250px" NextPrevFormat="ShortMonth" Width="330px" BorderStyle="Solid" CellSpacing="1">
+                        <td>Fecha Nacimiento :<br />
+                            &nbsp;
+                            <%--<div><asp:Calendar ID="datepicker" runat="server" Visible="False" OnSelectionChanged="datepicker_SelectionChanged" BackColor="White" BorderColor="Black" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="250px" NextPrevFormat="ShortMonth" Width="330px" BorderStyle="Solid" CellSpacing="1">
                             <DayHeaderStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" Height="8pt" />
                             <DayStyle BackColor="#CCCCCC" />
                             <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="White" />
@@ -41,8 +69,10 @@
                             <SelectedDayStyle BackColor="#333399" ForeColor="White" />
                             <TitleStyle BackColor="#333399" Font-Bold="True" Font-Size="12pt" ForeColor="White" BorderStyle="Solid" Height="12pt" />
                             <TodayDayStyle BackColor="#999999" ForeColor="White" />
-                            </asp:Calendar></div>
-                            <asp:TextBox ID="txtdtp" runat="server"></asp:TextBox><asp:LinkButton ID="lnkpickdate" runat="server" OnClick="lnkpickdate_Click">Fecha Nacimiento</asp:LinkButton>
+                            </asp:Calendar></div>--%>
+                             <asp:TextBox ID="txtdtp" type="date" runat="server" Height="31px" Width="200px" MaxLength="8" min="1939-01-01" max="2001-01-01"></asp:TextBox>
+
+                            <%--<asp:TextBox ID="txtdtp" runat="server"></asp:TextBox><asp:LinkButton ID="lnkpickdate" runat="server" OnClick="lnkpickdate_Click">Fecha Nacimiento</asp:LinkButton>--%>
                             
                         </td>
 
@@ -50,7 +80,7 @@
                             <asp:ListItem>Selecciona Genero</asp:ListItem>
                             <asp:ListItem>Masculino</asp:ListItem>
                             <asp:ListItem>Femenino</asp:ListItem>
-                            <asp:ListItem>Otro</asp:ListItem>
+                            
                             </asp:DropDownList>
                         </td>
                     </tr>
@@ -70,7 +100,7 @@
                         </td>
                         <td class="auto-style3">Password(*) :<asp:TextBox ID="txtPass"  runat="server" Height="31px" Width="315px" TextMode="Password" MaxLength="8"></asp:TextBox>
                         </td>
-                        <td>Repite Password (*):<asp:TextBox ID="txtRepass" runat="server" Height="31px" Width="315px" TextMode="Password" MaxLength="8"></asp:TextBox>
+                        <td>Repite Password (*):<asp:TextBox ID="txtRepass" runat="server" Height="31px" Width="315px" TextMode="Password"  MaxLength="8"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>

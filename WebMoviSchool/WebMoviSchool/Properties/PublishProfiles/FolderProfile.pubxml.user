@@ -166,10 +166,10 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>04/21/2019 17:29:42</publishTime>
     </File>
     <File Include="bin/WebMoviSchool.dll">
-      <publishTime>04/21/2019 17:40:40</publishTime>
+      <publishTime>04/21/2019 20:27:26</publishTime>
     </File>
     <File Include="bin/WebMoviSchool.pdb">
-      <publishTime>04/21/2019 17:40:40</publishTime>
+      <publishTime>04/21/2019 20:27:26</publishTime>
     </File>
     <File Include="ComentariosGeneral.aspx">
       <publishTime>04/21/2019 01:35:16</publishTime>
@@ -289,7 +289,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>04/21/2019 14:40:07</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>04/21/2019 17:43:28</publishTime>
+      <publishTime>04/21/2019 20:27:33</publishTime>
     </File>
     <File Include="Prueba1.aspx">
       <publishTime>04/09/2019 23:18:00</publishTime>
@@ -310,7 +310,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>04/07/2019 23:54:36</publishTime>
     </File>
     <File Include="RegistroUsuario.aspx">
-      <publishTime>04/19/2019 18:39:09</publishTime>
+      <publishTime>04/21/2019 20:16:12</publishTime>
     </File>
     <File Include="verDetalleMovi.aspx">
       <publishTime>04/21/2019 17:37:02</publishTime>

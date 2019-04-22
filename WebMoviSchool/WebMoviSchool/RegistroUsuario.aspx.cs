@@ -33,7 +33,7 @@ namespace WebMoviSchool
                 cboTipDoc.DataValueField = "id";
                 cboTipDoc.DataTextField = "nom";
                 cboTipDoc.DataBind();
-                cboTipDoc.Items.Insert(0, new ListItem("--Ingrese un Pais--", "0"));
+                cboTipDoc.Items.Insert(0, new ListItem("--Seleccione un Tipo Doc--", "0"));
 
             }
 
@@ -45,7 +45,7 @@ namespace WebMoviSchool
                 cboPais.DataValueField = "id";
                 cboPais.DataTextField = "nom";
                 cboPais.DataBind();
-                cboPais.Items.Insert(0, new ListItem("--Ingrese un Pais--", "0"));
+                cboPais.Items.Insert(0, new ListItem("--Seleccione un Pais--", "0"));
 
             }
 
@@ -57,7 +57,7 @@ namespace WebMoviSchool
                 cboTipoUsuario.DataValueField = "id";
                 cboTipoUsuario.DataTextField = "nom";
                 cboTipoUsuario.DataBind();
-                cboTipoUsuario.Items.Insert(0, new ListItem("--Ingrese un Pais--", "0"));
+                cboTipoUsuario.Items.Insert(0, new ListItem("--Seleccione un Tipo de Documento--", "0"));
 
             }
 
@@ -69,7 +69,8 @@ namespace WebMoviSchool
             if(lblNroVa.Text == "OK" && lblCorreo.Text == "OK")
             {
                           
-                if (cboDistrito.SelectedValue != "" && txtNombre.Text != "" && txtNro.Text !="" && txtCorreoElec.Text != "" && txtPass.Text !="" && txtRepass.Text != "")
+                if (cboDistrito.SelectedValue != "" && txtNombre.Text != "" && txtNro.Text !="" && txtCorreoElec.Text != "" && txtPass.Text !="" && txtRepass.Text != ""
+                    && txtRepass.Text == txtPass.Text)
                 { 
                 EntUsuario oEntUsuario = new EntUsuario();
 
@@ -96,6 +97,17 @@ namespace WebMoviSchool
                // Response.Redirect("RegistroUsuario.aspx");
 
                 Response.Write("<script>alert('Registro exitoso !!!!')</script>");
+
+                    txtNombre.Text = string.Empty;
+                    txtApellido.Text = string.Empty;
+                    txtNrocelular.Text = string.Empty;
+                    txtCorreoElec.Text = string.Empty;
+                    txtNro.Text = string.Empty;
+                    txtDireccion.Text = string.Empty;
+                    txtUsuario.Text = string.Empty;
+                    txtPass.Text = string.Empty;
+                    txtRepass.Text = string.Empty;
+
                 }
                 else
                 {
@@ -106,16 +118,16 @@ namespace WebMoviSchool
 
         }
 
-        protected void lnkpickdate_Click(object sender, EventArgs e)
-        {
-            datepicker.Visible = true;
-        }
+        //protected void lnkpickdate_Click(object sender, EventArgs e)
+        //{
+        //    datepicker.Visible = true;
+        //}
 
-        protected void datepicker_SelectionChanged(object sender, EventArgs e)
-        {
-            txtdtp.Text = datepicker.SelectedDate.ToShortDateString();
-            datepicker.Visible = false;
-        }
+        //protected void datepicker_SelectionChanged(object sender, EventArgs e)
+        //{
+        //    txtdtp.Text = datepicker.SelectedDate.ToShortDateString();
+        //    datepicker.Visible = false;
+        //}
 
         protected void cboDepartamento_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -125,7 +137,7 @@ namespace WebMoviSchool
             cboDistrito.DataValueField = "id";
             cboDistrito.DataTextField = "nom";
             cboDistrito.DataBind();
-            cboDistrito.Items.Insert(0, new ListItem("--Ingrese un Distrito--", "0"));
+            cboDistrito.Items.Insert(0, new ListItem("--Seleccione un Distrito--", "0"));
         }
 
         protected void cboPais_SelectedIndexChanged(object sender, EventArgs e)
@@ -136,7 +148,7 @@ namespace WebMoviSchool
             cboDepartamento.DataValueField = "id";
             cboDepartamento.DataTextField = "nom";
             cboDepartamento.DataBind();
-            cboDepartamento.Items.Insert(0, new ListItem("--Ingrese un Departamento--", "0"));
+            cboDepartamento.Items.Insert(0, new ListItem("--Seleccione un Departamento--", "0"));
 
         }
 
@@ -221,6 +233,11 @@ namespace WebMoviSchool
                 txtNro.MaxLength = 12;
             }
 
+        }
+
+        protected void cboTipDoc_TextChanged(object sender, EventArgs e)
+        {
+            txtNro.Text = "";
         }
     }
 }
