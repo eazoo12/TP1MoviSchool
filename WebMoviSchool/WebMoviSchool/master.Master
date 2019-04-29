@@ -173,16 +173,7 @@
 										<li><a href="RegistroUsuario.aspx">Registro Usuario</a></li>
 										
 										<li><a href="Rank10.aspx">TOP 10</a></li>
-										<li><a href="#">Adipiscing</a></li>
-										<li>
-											<span class="opener">Another Submenu</span>
-											<ul>
-												<li><a href="#">Lorem Dolor</a></li>
-												<li><a href="#">Ipsum Adipiscing</a></li>
-												<li><a href="#">Tempus Magna</a></li>
-												<li><a href="#">Feugiat Veroeros</a></li>
-											</ul>
-										</li>
+										
 										<li><a href="#">Opcion 3</a></li>
 										<li><a href="#">Opcion 1</a></li>
 										<li><a href="#">Opcion 2</a></li>
