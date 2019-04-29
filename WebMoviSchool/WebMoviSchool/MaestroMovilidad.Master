@@ -81,16 +81,7 @@
 										<li><a href="IndexMovilidad.aspx">Homepage</a></li>
 										<li><a href="#">Consultas Movilidad</a></li>
 										<li><a href="RegistroMovilidad.aspx">Registro Movilidad</a></li>
-										<li>
-											<span class="opener">Submenu</span>
-											<ul>
-												<li><a href="#">Lorem Dolor</a></li>
-												<li><a href="#">Ipsum Adipiscing</a></li>
-												<li><a href="#">Tempus Magna</a></li>
-												<li><a href="#">Feugiat Veroeros</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Etiam Dolore</a></li>
+										<li><a href="RegistrarPromociones.aspx">Registrar Promociones</a></li>
 										<li><a href="#">Adipiscing</a></li>
 										<li>
 											<span class="opener">Another Submenu</span>

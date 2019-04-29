@@ -81,5 +81,16 @@ namespace Capa_Negocio
             return datOMovilidad.SEL_10MOVI();
         }
 
+        public void INS_PROMOCION(string promocion, string dni, int opc)
+        {
+            datOMovilidad.INS_PROMOCION(promocion, dni, opc);
         }
+
+
+        public string SEL_PROMOCIONES_COD(string nroDni)
+        {
+            return datOMovilidad.SEL_PROMOCIONES_COD(nroDni);
+        }
+
+    }
 }

@@ -10,12 +10,12 @@ namespace Capa_Datos
 {
     public class datMovilidad
     {
-
+        string promociones;
         public List<EntMovilidad> SEL_USUARIOPANEL(string dni)
         {
 
             List<EntMovilidad> oListR = new List<EntMovilidad>();
-
+            
             using (SqlConnection conex = new SqlConnection(datConexion.cad_con))
             {
                 using (SqlCommand cmd = new SqlCommand("SEL_USUARIOPANEL", conex))
@@ -630,6 +630,91 @@ namespace Capa_Datos
                 }
             }
             return oListR;
+
+        }
+
+
+
+
+
+        public void INS_PROMOCION(string promocion, string dni , int opc)
+        {
+            try
+            {
+                using (SqlConnection conex = new SqlConnection(datConexion.cad_con))
+                {
+
+                    using (SqlCommand cmd = new SqlCommand("INS_PROMOCION", conex))
+                    {
+                        conex.Open();
+                        cmd.Parameters.Add("@promociones", SqlDbType.VarChar, 100).Value = promocion;
+                        cmd.Parameters.Add("@dni", SqlDbType.VarChar, 20).Value = dni;
+                       
+
+                        cmd.Parameters.Add("@opc", SqlDbType.Int).Value = opc;
+
+
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.ExecuteNonQuery();
+
+                        conex.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+
+
+        }
+
+
+
+
+        public string SEL_PROMOCIONES_COD(string nroDni)
+        {
+
+            //List<Ent10Movi> oListR = new List<Ent10Movi>();
+
+            using (SqlConnection conex = new SqlConnection(datConexion.cad_con))
+            {
+                using (SqlCommand cmd = new SqlCommand("SEL_PROMOCIONES_COD", conex))
+                {
+                    conex.Open();
+                    cmd.Parameters.Add("@dni", SqlDbType.VarChar, 20).Value = nroDni;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+
+                        int colPromociones = dr.GetOrdinal("Promociones");
+                     
+                        //int colCodArea = dr.GetOrdinal("codArea");
+
+
+                        int colCant = dr.FieldCount;
+                        object[] values = new object[colCant];
+                        //Ent10Movi oEntUsu = null;
+
+                        while (dr.Read())
+                        {
+                            //oEntUsu = new Ent10Movi();
+                            dr.GetValues(values);
+
+                            promociones = Convert.ToString(values[colPromociones]);
+                            
+                            /// oEntUsu.CodArea = Convert.ToInt32(values[colCodArea]);
+
+
+                           // oListR.Add(oEntUsu);
+                        }
+                    }
+                }
+            }
+            return promociones;
 
         }
 
