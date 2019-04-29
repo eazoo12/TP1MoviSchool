@@ -324,6 +324,113 @@ namespace Capa_Datos
         }
 
 
+        public void UPD_MOVILIDAD(int codUsuario, String telefono, String correo, String direccion)
+        {
+            try
+            {
+                using (SqlConnection conex = new SqlConnection(datConexion.cad_con))
+                {
+                    using (SqlCommand cmd = new SqlCommand("UPD_MOVILIDAD", conex))
+                    {
+                        conex.Open();
+                        cmd.Parameters.Add("@codUsuario", SqlDbType.Int).Value = codUsuario;
+                        cmd.Parameters.Add("@celular", SqlDbType.VarChar, 20).Value = telefono;
+                        cmd.Parameters.Add("@correoElec", SqlDbType.VarChar, 200).Value = correo;
+                        cmd.Parameters.Add("@direccion", SqlDbType.VarChar, 200).Value = direccion;
+
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.ExecuteNonQuery();
+
+                        conex.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+
+
+        }
+
+
+        public List<EntUsuario> SEL_USUARIOPANEL2(String dni)
+        {
+            List<EntUsuario> oListU = new List<EntUsuario>();
+
+            using (SqlConnection conex = new SqlConnection(datConexion.cad_con))
+            {
+                using (SqlCommand cmd = new SqlCommand("SEL_USUARIOPANEL2", conex))
+                {
+                    conex.Open();
+                    cmd.Parameters.Add("@dni", SqlDbType.Int).Value = dni;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        int colnombreAp = dr.GetOrdinal("nombreAp");
+                        int colcelular = dr.GetOrdinal("celular");
+                        int colcorreoElec = dr.GetOrdinal("correoElec");
+                        int coldireccion = dr.GetOrdinal("direccion");
+
+                        int colCant = dr.FieldCount;
+                        object[] values = new object[colCant];
+                        EntUsuario oEntUsu = null;
+
+                        while (dr.Read())
+                        {
+                            oEntUsu = new EntUsuario();
+                            dr.GetValues(values);
+
+                            oEntUsu.Nombre = Convert.ToString(values[colnombreAp]);
+                            oEntUsu.Celular = Convert.ToString(values[colcelular]);
+                            oEntUsu.CorreoElec = Convert.ToString(values[colcorreoElec]);
+                            oEntUsu.Direccion = Convert.ToString(values[coldireccion]);
+
+                            oListU.Add(oEntUsu);
+                        }
+                    }
+
+                }
+            }
+            return oListU;
+        }
+
+
+        public void UPD_PADRE(int codUsuario, String telefono, String correo, String direccion)
+        {
+            try
+            {
+                using (SqlConnection conex = new SqlConnection(datConexion.cad_con))
+                {
+                    using (SqlCommand cmd = new SqlCommand("UPD_PADRE", conex))
+                    {
+                        conex.Open();
+                        cmd.Parameters.Add("@codUsuario", SqlDbType.Int).Value = codUsuario;
+                        cmd.Parameters.Add("@celular", SqlDbType.VarChar, 20).Value = telefono;
+                        cmd.Parameters.Add("@correoElec", SqlDbType.VarChar, 200).Value = correo;
+                        cmd.Parameters.Add("@direccion", SqlDbType.VarChar, 200).Value = direccion;
+
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.ExecuteNonQuery();
+
+                        conex.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+
+
+        }
+
+
+
+
 
     }
 }

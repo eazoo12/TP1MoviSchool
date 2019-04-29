@@ -35,6 +35,7 @@ namespace Capa_Datos
                         int colcelular = dr.GetOrdinal("celular");
                         int colcorreoElec = dr.GetOrdinal("correoElec");
                         //int colCodArea = dr.GetOrdinal("codArea");
+                        int coldireccion = dr.GetOrdinal("direccion");
 
 
                         int colCant = dr.FieldCount;
@@ -50,6 +51,8 @@ namespace Capa_Datos
                             oEntUsu.Celular = Convert.ToString(values[colcelular]);
                             oEntUsu.CorreoElec = Convert.ToString(values[colcorreoElec]);
                             /// oEntUsu.CodArea = Convert.ToInt32(values[colCodArea]);
+                            /// 
+                            oEntUsu.Direccion = Convert.ToString(values[coldireccion]);
 
 
                             oListR.Add(oEntUsu);
@@ -717,6 +720,9 @@ namespace Capa_Datos
             return promociones;
 
         }
+
+
+
 
 
 

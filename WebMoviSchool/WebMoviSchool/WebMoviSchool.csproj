@@ -114,6 +114,9 @@
     <Content Include="logout.aspx" />
     <Content Include="Logueo.aspx" />
     <Content Include="master.Master" />
+    <Content Include="ModificarDueñoMovilidad.aspx" />
+    <Content Include="ModificarMovilidad.aspx" />
+    <Content Include="ModificarPadre.aspx" />
     <Content Include="Rank10.aspx" />
     <Content Include="RecuperarContraseña.aspx" />
     <Content Include="RegistrarPromociones.aspx" />
@@ -242,6 +245,27 @@
     </Compile>
     <Compile Include="master.Master.designer.cs">
       <DependentUpon>master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarDueñoMovilidad.aspx.cs">
+      <DependentUpon>ModificarDueñoMovilidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificarDueñoMovilidad.aspx.designer.cs">
+      <DependentUpon>ModificarDueñoMovilidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarMovilidad.aspx.cs">
+      <DependentUpon>ModificarMovilidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificarMovilidad.aspx.designer.cs">
+      <DependentUpon>ModificarMovilidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarPadre.aspx.cs">
+      <DependentUpon>ModificarPadre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificarPadre.aspx.designer.cs">
+      <DependentUpon>ModificarPadre.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PruebaMaster.Master.cs">

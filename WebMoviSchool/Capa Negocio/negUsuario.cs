@@ -63,5 +63,20 @@ namespace Capa_Negocio
             objDatUsaurio.UPD_CAMB_PW(codUsuario, pass);
         }
 
+        public void UPD_MOVILIDAD(int codUsuario, String telefono, String correo, String direccion)
+        {
+            objDatUsaurio.UPD_MOVILIDAD(codUsuario, telefono, correo, direccion);
+        }
+
+        public List<EntUsuario> SEL_USUARIO_PANEL2(string dni)
+        {
+            return objDatUsaurio.SEL_USUARIOPANEL2(dni);
+        }
+
+        public void UPD_PADRE(int codUsuario, String telefono, String correo, String direccion)
+        {
+            objDatUsaurio.UPD_PADRE(codUsuario, telefono, correo, direccion);
+        }
+
     }
 }

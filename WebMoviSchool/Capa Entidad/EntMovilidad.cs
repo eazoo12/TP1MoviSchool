@@ -21,5 +21,10 @@ namespace Capa_Entidad
         public string CorreoElec { get { return _correoElec; } set { _correoElec = value; } }
 
 
+        string _direccion;
+
+        public string Direccion { get { return _direccion; } set { _direccion = value; } }
+
+
     }
 }
