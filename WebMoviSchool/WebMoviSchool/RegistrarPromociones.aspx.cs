@@ -20,27 +20,31 @@ namespace WebMoviSchool
             {
                 promociones = obNegociMovilida.SEL_PROMOCIONES_COD(Session["DNI"].ToString());
 
-                if(promociones == "0")
+                if(promociones != "0")
                 {
                     lblPromociones.Visible = true;
+                    btnRegistro.Enabled = false;
                     lblPromociones.Text = promociones;
                 }
                 else
                 {
                     lblPromociones.Visible = false;
+                    btnRegistro.Enabled = true;
                 }
             }
         }
 
         protected void btnRegistro_Click(object sender, EventArgs e)
         {
-            if (((string)Session["ID_TIPOUSU"]) == "5" && promociones != "0")
+            if (((string)Session["ID_TIPOUSU"]) == "5")
             {
                 obNegociMovilida.INS_PROMOCION(txtPromocio.Text, Session["DNI"].ToString(), 1);
 
                 txtPromocio.Text = "";
 
-                
+                btnRegistro.Enabled = false;
+                lblPromociones.Text = promociones;
+
             }
             
 
