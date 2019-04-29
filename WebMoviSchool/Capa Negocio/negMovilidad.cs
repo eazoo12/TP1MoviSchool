@@ -76,5 +76,10 @@ namespace Capa_Negocio
             return datOMovilidad.SEL_TOTALVoto(codUsuario);
         }
 
-    }
+        public List<Ent10Movi> SEL_10MOVI()
+        {
+            return datOMovilidad.SEL_10MOVI();
+        }
+
+        }
 }

@@ -585,6 +585,57 @@ namespace Capa_Datos
 
 
 
+        
+        public List<Ent10Movi> SEL_10MOVI()
+        {
+
+            List<Ent10Movi> oListR = new List<Ent10Movi>();
+
+            using (SqlConnection conex = new SqlConnection(datConexion.cad_con))
+            {
+                using (SqlCommand cmd = new SqlCommand("SEL_10MOVI", conex))
+                {
+                    conex.Open();
+                   
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+
+                        int colpromedio = dr.GetOrdinal("promedio");
+                        int colnom_ape = dr.GetOrdinal("nom_ape");
+                        int colcelular = dr.GetOrdinal("celular");
+                        //int colCodArea = dr.GetOrdinal("codArea");
+
+
+                        int colCant = dr.FieldCount;
+                        object[] values = new object[colCant];
+                        Ent10Movi oEntUsu = null;
+
+                        while (dr.Read())
+                        {
+                            oEntUsu = new Ent10Movi();
+                            dr.GetValues(values);
+
+                            oEntUsu.promedio = Convert.ToInt32(values[colpromedio]);
+                            oEntUsu.nom_ape = Convert.ToString(values[colnom_ape]);
+                            oEntUsu.celular = Convert.ToString(values[colcelular]);
+                            /// oEntUsu.CodArea = Convert.ToInt32(values[colCodArea]);
+
+
+                            oListR.Add(oEntUsu);
+                        }
+                    }
+                }
+            }
+            return oListR;
+
+        }
+
+
+
+
 
     }
 }

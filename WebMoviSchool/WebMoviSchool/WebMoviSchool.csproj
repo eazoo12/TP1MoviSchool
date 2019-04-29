@@ -106,6 +106,7 @@
     <Content Include="images\iconfinder_1-03_511564.png" />
     <Content Include="images\iconfinder_eye_3688491.ico" />
     <Content Include="images\iconfinder_photos-r_86352 %281%29.png" />
+    <Content Include="images\Logo.jpeg" />
     <Content Include="images\m.jpg" />
     <Content Include="IndexMovilidad.aspx" />
     <Content Include="IndexPadre.aspx" />
@@ -113,6 +114,7 @@
     <Content Include="logout.aspx" />
     <Content Include="Logueo.aspx" />
     <Content Include="master.Master" />
+    <Content Include="Rank10.aspx" />
     <Content Include="RecuperarContraseña.aspx" />
     <Content Include="RegistroMovilidad.aspx" />
     <Content Include="RegistroUsuario.aspx" />
@@ -247,6 +249,13 @@
     </Compile>
     <Compile Include="PruebaMaster.Master.designer.cs">
       <DependentUpon>PruebaMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Rank10.aspx.cs">
+      <DependentUpon>Rank10.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rank10.aspx.designer.cs">
+      <DependentUpon>Rank10.aspx</DependentUpon>
     </Compile>
     <Compile Include="RecuperarContraseña.aspx.cs">
       <DependentUpon>RecuperarContraseña.aspx</DependentUpon>

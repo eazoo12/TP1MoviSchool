@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ent10Movi.cs" />
     <Compile Include="EntBMovilidadUs.cs" />
     <Compile Include="EntComentario.cs" />
     <Compile Include="EntComentarioRegistro.cs" />
