@@ -23,16 +23,28 @@
                     <table style="width:100%;">
                     <tr>
                         <td class="auto-style3">Nombre y Apellido :
-                            <asp:Label ID="lblNombreApe" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="lblNombreApe" runat="server" Text="Label"
+                            pattern="[A-Z a-z]{3,100}" 
+                            oninvalid="setCustomValidity('Ingrese solo texto')"
+                            oninput="setCustomValidity('')"  
+                                ></asp:Label>
                         </td>
                         <td class="align-left">&nbsp;Celular :
-                            <asp:Label ID="Celular" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="Celular" runat="server" Text="Label"
+                             pattern="[0-9]{9}" 
+                            oninvalid="setCustomValidity('Debe ingresar solo digitos')"
+                            oninput="setCustomValidity('')" 
+                                ></asp:Label>
                         </td>
                         
                     </tr>
                     <tr>
                         <td class="auto-style3">Corre Electronico:
-                            <asp:Label ID="lblCorreo" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="lblCorreo" runat="server" Text="Label"
+                             pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
+                            oninvalid="setCustomValidity('Ingresar correo valido')"
+                            oninput="setCustomValidity('')"  
+                             ></asp:Label>
                         </td>
                         
                     </tr>

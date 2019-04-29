@@ -21,8 +21,13 @@ namespace WebMoviSchool
         {
             if (Session["ID_TIPOUSU"] == null)
             {
+                //Response.Redirect("logout.aspx");
                 Response.Redirect("Login.aspx");
-                
+
+            }
+            else
+            {
+                Response.Redirect("logout.aspx");
             }
             
         }

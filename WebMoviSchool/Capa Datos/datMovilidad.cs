@@ -723,6 +723,53 @@ namespace Capa_Datos
 
 
 
+        public string SEL_PROMOCIONES_CODMOVILIDAD(string cod)
+        {
+
+            //List<Ent10Movi> oListR = new List<Ent10Movi>();
+
+            using (SqlConnection conex = new SqlConnection(datConexion.cad_con))
+            {
+                using (SqlCommand cmd = new SqlCommand("SEL_PROMOCIONES_CODMOVILIDAD", conex))
+                {
+                    conex.Open();
+                    cmd.Parameters.Add("@codUsuario", SqlDbType.Int).Value = cod;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+
+                        int colPromociones = dr.GetOrdinal("Promociones");
+
+                        //int colCodArea = dr.GetOrdinal("codArea");
+
+
+                        int colCant = dr.FieldCount;
+                        object[] values = new object[colCant];
+                        //Ent10Movi oEntUsu = null;
+
+                        while (dr.Read())
+                        {
+                            //oEntUsu = new Ent10Movi();
+                            dr.GetValues(values);
+
+                            promociones = Convert.ToString(values[colPromociones]);
+
+                            /// oEntUsu.CodArea = Convert.ToInt32(values[colCodArea]);
+
+
+                            // oListR.Add(oEntUsu);
+                        }
+                    }
+                }
+            }
+            return promociones;
+
+        }
+
+
+
 
 
 

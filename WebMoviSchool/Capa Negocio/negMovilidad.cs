@@ -92,5 +92,10 @@ namespace Capa_Negocio
             return datOMovilidad.SEL_PROMOCIONES_COD(nroDni);
         }
 
+        public string SEL_PROMOCIONES_CODMOVILIDAD(string cod)
+        {
+            return datOMovilidad.SEL_PROMOCIONES_CODMOVILIDAD(cod);
+        }
+
     }
 }

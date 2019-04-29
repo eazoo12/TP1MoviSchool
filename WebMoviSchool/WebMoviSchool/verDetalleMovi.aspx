@@ -44,7 +44,7 @@
                             <asp:Panel ID="panelPun" runat="server" Visible="False">
                                  <p class="clasificacion" typeof="radio">
                                     <asp:RadioButtonList ID="rdbComentario" runat="server" RepeatDirection="Horizontal">
-                                        <asp:ListItem Value="5">5 ★</asp:ListItem>
+                                        <asp:ListItem Value="5" Selected="True">5 ★</asp:ListItem>
                                         <asp:ListItem Value="4">4 ★</asp:ListItem>
                                         <asp:ListItem Value="3">3 ★</asp:ListItem>
                                         <asp:ListItem Value="2">2 ★</asp:ListItem>
@@ -80,8 +80,14 @@
 
                              </h3></td>
                     </tr>
-                                            
-                  
+                    <tr>
+                        <td>
+                            <asp:Label ID="Label3" runat="server" Text="Promociones : "></asp:Label>
+                            <asp:Label ID="lblPromociones" runat="server" Text="Label"></asp:Label>
+                        </td>
+                    </tr>
+
+                                      
                     </table>
         
                                       

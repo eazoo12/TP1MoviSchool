@@ -17,7 +17,7 @@ namespace WebMoviSchool
         negMovilidad negOMovilidad = new negMovilidad();
         negUsuario negUsuarios = new negUsuario();
         EntMovilidad usuar = new EntMovilidad();
-       
+        string promociones;
         string soatCade,ReveTecCade, fotoAutoCade;
 
 
@@ -31,6 +31,7 @@ namespace WebMoviSchool
                 //Response.Redirect("IndexPadre.aspx");
                 panelPun.Visible = true;
                 lblVolorasCom.Visible = false;
+                lblPromociones.Text = negOMovilidad.SEL_PROMOCIONES_CODMOVILIDAD(Session["COD_USUARIO_DE"].ToString());
             }
             else if(Session["ID_TIPOUSU"] == null)
             {
@@ -39,6 +40,7 @@ namespace WebMoviSchool
                 //Response.Redirect("index.aspx");
                 panelPun.Visible = false;
                 lblVolorasCom.Visible = true;
+                lblPromociones.Text = "Registrarse al Sistema para ver Promociones";
             }
 
 
@@ -120,6 +122,8 @@ namespace WebMoviSchool
 
                 negOMovilidad.INS_PUNTUACION(Session["DNI"].ToString(), Convert.ToInt32(Session["COD_USUARIO_DE"].ToString()), Convert.ToInt32(rdbComentario.SelectedValue), 1);
                 valorar();
+
+                btnVotar.Enabled = false;
             }
         }
 
